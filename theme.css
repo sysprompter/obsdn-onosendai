@@ -33,10 +33,12 @@
   --os-ink:        #dcddde;        /* primary off-white                  */
   --os-ink-dim:    #898b85;        /* muted gray-green                   */
   --os-ink-ghost:  #666666;        /* faint dim gray                     */
-  --os-cyan:       #28b0ff;        /* electric cyan-blue: links/accent   */
-  --os-green:      #00ff37;        /* terminal green: H2                 */
-  --os-green-dim:  #77d47c;        /* muted green: hover                 */
-  --os-yellow:     #bbce16;        /* yellow-green: search match         */
+  --os-cyan:            #28b0ff;   /* electric cyan-blue: links/accent   */
+  --os-green:           #00ff37;   /* terminal green                     */
+  --os-green-dim:       #77d47c;   /* muted green: hover                 */
+  --os-pipboy:          #00e8b0;   /* pipboy teal-green: H5              */
+  --os-yellow:          #bbce16;   /* yellow-green: search match         */
+  --os-electric-yellow: #f0e800;   /* neon electric yellow: H2           */
 
   /* Borders */
   --os-border-teal:    #0c496d;   /* dark teal: primary border          */
@@ -191,9 +193,9 @@
   --h5-weight:      500;
   --h6-weight:      400;
   --h1-color:       var(--os-ink);
-  --h2-color:       var(--os-green);
-  --h3-color:       var(--os-ink);
-  --h4-color:       var(--os-ink);
+  --h2-color:       var(--os-electric-yellow);
+  --h3-color:       var(--os-scroll-hot);
+  --h4-color:       var(--os-pipboy);
   --h5-color:       var(--os-ink);
   --h6-color:       var(--os-ink-dim);
   --h1-font:        var(--os-font-ui);
@@ -216,7 +218,7 @@
   --h6-variant:     normal;
 
   /* Code */
-  --code-size:        0.85em;
+  --code-size:        0.75em;
   --code-background:  var(--os-bg-05);
   --code-normal:      var(--os-ink);
   --code-comment:     var(--os-ink-dim);
@@ -616,8 +618,10 @@
   --os-ink-ghost:  #666666;
   --os-cyan:       #28b0ff;
   --os-green:      #00ff37;
-  --os-green-dim:  #77d47c;
-  --os-yellow:     #bbce16;
+  --os-green-dim:       #77d47c;
+  --os-pipboy:          #00e8b0;
+  --os-yellow:          #bbce16;
+  --os-electric-yellow: #f0e800;
 
   --os-border-teal:    #0c496d;
   --os-border-crimson: #a00f3f;
@@ -755,9 +759,9 @@
   --h5-weight:      500;
   --h6-weight:      400;
   --h1-color:       var(--os-ink);
-  --h2-color:       var(--os-green);
-  --h3-color:       var(--os-ink);
-  --h4-color:       var(--os-ink);
+  --h2-color:       var(--os-electric-yellow);
+  --h3-color:       var(--os-scroll-hot);
+  --h4-color:       var(--os-pipboy);
   --h5-color:       var(--os-ink);
   --h6-color:       var(--os-ink-dim);
   --h1-font:        var(--os-font-ui);
@@ -779,7 +783,7 @@
   --h5-variant:     normal;
   --h6-variant:     normal;
 
-  --code-size:        0.85em;
+  --code-size:        0.75em;
   --code-background:  var(--os-bg-05);
   --code-normal:      var(--os-ink);
   --code-comment:     var(--os-ink-dim);
@@ -1388,7 +1392,7 @@
   line-height: var(--font-text-line-height);
 }
 .markdown-preview-section {
-  padding: 20px 30px 30px 45px;
+  padding: 20px clamp(14px, 3%, 30px) 30px clamp(18px, 4%, 45px);
   max-width: var(--file-line-width);
 }
 
@@ -1400,7 +1404,7 @@
   background: var(--background-primary);
 }
 .markdown-source-view.mod-cm6 .cm-content {
-  padding: 20px 30px 30px 45px;
+  padding: 20px clamp(14px, 3%, 30px) 30px clamp(18px, 4%, 45px);
   caret-color: var(--text-accent);
 }
 .markdown-source-view.mod-cm6 .cm-line {
