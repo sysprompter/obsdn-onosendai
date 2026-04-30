@@ -1,0 +1,581 @@
+/* ================================================================
+   ONO-SENDAI — Design Token System
+   All CSS custom properties. Imported by theme.css.
+   ================================================================ */
+
+/* ── Shared (theme-independent) ────────────────────────────── */
+:root {
+  --os-font-ui:    Cairo, Roboto, Inter, "Segoe UI", sans-serif;
+  --os-font-mono:  "Fira Code", "Source Code Pro", monospace;
+  --os-font-input: Barlow, Cairo, Inter, sans-serif;
+
+  /* Animation timing — snappy / mechanical feel */
+  --os-t-fast:   80ms linear;
+  --os-t-normal: 150ms linear;
+  --os-t-tab:    100ms linear;
+  --os-t-folder: 15ms linear;
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────── */
+.theme-dark {
+
+  /* ---- Raw Palette Tokens ---- */
+
+  /* Backgrounds */
+  --os-bg-00:      #000000;        /* pure black: chrome, ribbons        */
+  --os-bg-05:      #050505;        /* near-black: code blocks, alt bg    */
+  --os-bg-10:      #060809;        /* primary content background         */
+  --os-bg-panel:   #0d1720;              /* near-black cool: sidebars, panels  */
+  --os-bg-hover:   rgba(12,73,109,0.5); /* translucent teal: hover/selected   */
+  --os-bg-ui:      #2a2a2a;        /* dark gray: interactive fills       */
+
+  /* Text */
+  --os-ink:        #dcddde;        /* primary off-white                  */
+  --os-ink-dim:    #898b85;        /* muted gray-green                   */
+  --os-ink-ghost:  #666666;        /* faint dim gray                     */
+  --os-cyan:       #28b0ff;        /* electric cyan-blue: links/accent   */
+  --os-green:      #00ff37;        /* terminal green: H2                 */
+  --os-green-dim:  #77d47c;        /* muted green: hover                 */
+  --os-yellow:     #bbce16;        /* yellow-green: search match         */
+
+  /* Borders */
+  --os-border-teal:    #0c496d;   /* dark teal: primary border          */
+  --os-border-crimson: #a00f3f;   /* deep crimson: accent border        */
+  --os-border-dark:    #272727;   /* dark charcoal: muted border        */
+
+  /* Interactive */
+  --os-hover-teal:  #286c91;          /* hover state                    */
+  --os-sky:         rgb(32,171,233);  /* sky blue: accent interactive   */
+  --os-sky-hover:   #1da3d6;          /* accent interactive hover       */
+
+  /* Scrollbars */
+  --os-scroll-track:    rgb(20,50,70);
+  --os-scroll-thumb:    rgba(255,255,255,0.2);
+  --os-scroll-hot:      #ff3392;   /* hot pink: active scrollbar thumb  */
+
+  /* Strong accents */
+  --os-hot-pink:  #e60953;        /* magenta-red: errors, badges        */
+  --os-amber:     #d39f2f;        /* warm amber: mild indicators        */
+
+  /* Tags */
+  --os-tag-navy:    rgb(10,54,134);   /* tag pill background            */
+  --os-tag-magenta: rgb(238,54,238);  /* tag panel text color           */
+
+  /* Graph */
+  --os-gfx-node:   #ff2882;
+  --os-gfx-edge:   #0c496d;
+  --os-gfx-label:  #ff3333;
+  --os-gfx-tag:    #0b9ba5;
+  --os-gfx-attach: #4cf15a;
+
+  /* ---- Obsidian Standard Variable Mappings ---- */
+
+  /* Backgrounds */
+  --background-primary:               var(--os-bg-10);
+  --background-primary-alt:           var(--os-bg-05);
+  --background-secondary:             var(--os-bg-panel);
+  --background-secondary-alt:         var(--os-bg-00);
+  --background-modifier-hover:        var(--os-bg-hover);
+  --background-modifier-active-hover: var(--os-bg-hover);
+  --background-modifier-border:       var(--os-border-teal);
+  --background-modifier-border-hover: var(--os-hover-teal);
+  --background-modifier-border-focus: var(--os-cyan);
+  --background-modifier-error:        #5c001f;
+  --background-modifier-error-rgb:    92, 0, 31;
+  --background-modifier-success:      #003a1a;
+  --background-modifier-message:      #1a0030;
+  --background-modifier-form-field:   #0c1f2e;
+
+  /* Text */
+  --text-normal:              var(--os-ink);
+  --text-muted:               var(--os-ink-dim);
+  --text-faint:               var(--os-ink-ghost);
+  --text-accent:              var(--os-cyan);
+  --text-accent-hover:        var(--os-green-dim);
+  --text-on-accent:           #ffffff;
+  --text-on-accent-muted:     rgba(255,255,255,0.65);
+  --text-error:               var(--os-hot-pink);
+  --text-warning:             var(--os-amber);
+  --text-success:             var(--os-green);
+  --text-selection:           rgba(40,176,255,0.18);
+  --text-highlight-bg:        rgba(187,206,22,0.28);
+  --text-highlight-bg-active: rgba(187,206,22,0.5);
+
+  /* Interactive */
+  --interactive-normal:       var(--os-bg-ui);
+  --interactive-hover:        var(--os-hover-teal);
+  --interactive-accent:       var(--os-sky);
+  --interactive-accent-hover: var(--os-sky-hover);
+  --interactive-accent-rgb:   32, 171, 233;
+
+  /* Accent */
+  --color-accent:   var(--os-cyan);
+  --color-accent-1: var(--os-sky);
+  --color-accent-2: var(--os-sky-hover);
+
+  /* Scrollbars */
+  --scrollbar-bg:              var(--os-scroll-track);
+  --scrollbar-thumb-bg:        var(--os-scroll-thumb);
+  --scrollbar-active-thumb-bg: var(--os-scroll-hot);
+
+  /* Graph */
+  --graph-node:            var(--os-gfx-node);
+  --graph-node-unresolved: rgba(255,40,130,0.35);
+  --graph-node-focused:    var(--os-cyan);
+  --graph-node-tag:        var(--os-gfx-tag);
+  --graph-node-attachment: var(--os-gfx-attach);
+  --graph-line:            var(--os-gfx-edge);
+  --graph-text:            var(--os-gfx-label);
+  --graph-bg:              var(--os-bg-00);
+
+  /* Tags */
+  --tag-color:            #ffffff;
+  --tag-background:       var(--os-tag-navy);
+  --tag-background-hover: var(--os-hover-teal);
+  --tag-padding-x:        7px;
+  --tag-padding-y:        1px;
+  --tag-radius:           14px;
+  --tag-font-size:        11px;
+  --tag-weight:           500;
+
+  /* Navigation (file explorer) */
+  --nav-item-size:              12px;
+  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color-hover:       var(--os-ink);
+  --nav-item-color-active:      var(--os-cyan);
+  --nav-item-color-highlighted: var(--os-yellow);
+  --nav-item-background-hover:  rgba(40,108,145,0.45);
+  --nav-item-background-active: rgba(40,176,255,0.12);
+  --nav-item-weight:            400;
+  --nav-item-weight-hover:      400;
+  --nav-item-weight-active:     600;
+  --nav-folder-color:           var(--os-ink);
+  --nav-folder-color-hover:     var(--os-cyan);
+  --nav-folder-color-active:    var(--os-cyan);
+  --nav-folder-weight:          600;
+  --nav-folder-weight-hover:    600;
+  --nav-folder-weight-active:   600;
+
+  /* Tabs */
+  --tab-text-color:                        var(--os-ink-ghost);
+  --tab-text-color-focused:                var(--os-ink-dim);
+  --tab-text-color-focused-active:         var(--os-ink);
+  --tab-text-color-focused-highlighted:    var(--os-yellow);
+  --tab-text-color-focused-active-current: var(--os-ink);
+  --tab-background-active:                 var(--os-bg-10);
+  --tab-outline-color:                     var(--os-border-teal);
+  --tab-divider-color:                     var(--os-border-dark);
+  --tab-radius:                            0px;
+  --tab-radius-active:                     0px;
+  --tab-font-size:                         var(--font-ui-small);
+  --tab-font-weight:                       400;
+  --tab-container-background:              var(--os-bg-00);
+
+  /* Headings */
+  --h1-size:        1.9em;
+  --h2-size:        1.6em;
+  --h3-size:        1.25em;
+  --h4-size:        1.13em;
+  --h5-size:        0.94em;
+  --h6-size:        0.94em;
+  --h1-line-height: 1.35;
+  --h2-line-height: 1.35;
+  --h3-line-height: 1.2;
+  --h4-line-height: 1.3;
+  --h5-line-height: 1.4;
+  --h6-line-height: 1.4;
+  --h1-weight:      700;
+  --h2-weight:      700;
+  --h3-weight:      600;
+  --h4-weight:      600;
+  --h5-weight:      500;
+  --h6-weight:      400;
+  --h1-color:       var(--os-ink);
+  --h2-color:       var(--os-green);
+  --h3-color:       var(--os-ink);
+  --h4-color:       var(--os-ink);
+  --h5-color:       var(--os-ink);
+  --h6-color:       var(--os-ink-dim);
+  --h1-font:        var(--os-font-ui);
+  --h2-font:        var(--os-font-ui);
+  --h3-font:        var(--os-font-ui);
+  --h4-font:        var(--os-font-ui);
+  --h5-font:        var(--os-font-ui);
+  --h6-font:        var(--os-font-ui);
+  --h1-style:       normal;
+  --h2-style:       normal;
+  --h3-style:       normal;
+  --h4-style:       normal;
+  --h5-style:       normal;
+  --h6-style:       italic;
+  --h1-variant:     normal;
+  --h2-variant:     normal;
+  --h3-variant:     normal;
+  --h4-variant:     normal;
+  --h5-variant:     normal;
+  --h6-variant:     normal;
+
+  /* Code */
+  --code-size:        0.85em;
+  --code-background:  var(--os-bg-05);
+  --code-normal:      var(--os-ink);
+  --code-comment:     var(--os-ink-dim);
+  --code-function:    var(--os-cyan);
+  --code-important:   var(--os-hot-pink);
+  --code-keyword:     var(--os-green);
+  --code-operator:    var(--os-amber);
+  --code-property:    var(--os-cyan);
+  --code-punctuation: var(--os-ink-ghost);
+  --code-string:      var(--os-amber);
+  --code-tag:         var(--os-hot-pink);
+  --code-value:       var(--os-green);
+
+  /* HR */
+  --hr-color:     var(--os-border-teal);
+  --hr-thickness: 1px;
+
+  /* Indentation guides */
+  --indentation-guide-width:        1px;
+  --indentation-guide-color:        rgba(12,73,109,0.55);
+  --indentation-guide-color-active: var(--os-border-teal);
+
+  /* Borders / radius */
+  --radius-s:     0px;
+  --radius-m:     4px;
+  --radius-l:     4px;
+  --radius-xl:    4px;
+  --border-width: 1px;
+  --border-color: var(--os-border-teal);
+
+  /* Divider */
+  --divider-color:       var(--os-border-dark);
+  --divider-color-hover: var(--os-border-teal);
+  --divider-width:       1px;
+  --divider-width-hover: 4px;
+
+  /* Embed / transclusion */
+  --embed-border-left:   2px solid var(--os-border-teal);
+  --embed-border-right:  none;
+  --embed-border-top:    none;
+  --embed-border-bottom: none;
+  --embed-background:    transparent;
+  --embed-padding:       0 0 0 12px;
+  --embed-font-style:    normal;
+
+  /* Metadata / frontmatter */
+  --metadata-label-text-color: var(--os-ink-dim);
+  --metadata-input-text-color: var(--os-ink);
+  --metadata-background:       var(--os-bg-05);
+  --metadata-divider-color:    var(--os-border-dark);
+
+  /* Ribbon */
+  --ribbon-background:           var(--os-bg-00);
+  --ribbon-background-collapsed: var(--os-bg-00);
+  --ribbon-width:                34px;
+
+  /* Status bar */
+  --status-bar-background:   var(--os-bg-00);
+  --status-bar-text-color:   var(--os-ink-ghost);
+  --status-bar-border-color: transparent;
+  --status-bar-border-width: 0px;
+  --status-bar-font-size:    11px;
+  --status-bar-radius:       0px;
+
+  /* Titlebar */
+  --titlebar-background:         var(--os-bg-00);
+  --titlebar-background-focused: #080808;
+  --titlebar-border-width:       0px;
+  --titlebar-border-color:       var(--os-border-dark);
+  --titlebar-text-color:         var(--os-ink-ghost);
+  --titlebar-text-color-focused: var(--os-ink-dim);
+
+  /* Table */
+  --table-border-width:              1px;
+  --table-border-color:              var(--os-border-dark);
+  --table-header-background:         rgba(15,81,114,0.5);
+  --table-header-background-hover:   rgba(40,108,145,0.5);
+  --table-header-border-width:       1px;
+  --table-header-border-color:       var(--os-border-teal);
+  --table-header-color:              var(--os-ink);
+  --table-header-weight:             600;
+  --table-row-background-hover:      rgba(40,108,145,0.15);
+  --table-row-alt-background:        rgba(5,5,5,0.4);
+
+  /* Callout */
+  --callout-border-width:   1px;
+  --callout-border-opacity: 0.4;
+  --callout-padding:        8px 12px;
+  --callout-radius:         4px;
+  --callout-title-size:     0.9em;
+
+  /* Input */
+  --input-height:       28px;
+  --input-radius:       4px;
+  --input-border-width: 1px;
+
+  /* Checkbox */
+  --checkbox-radius:             2px;
+  --checkbox-size:               14px;
+  --checkbox-marker-color:       #ffffff;
+  --checkbox-color:              var(--os-sky);
+  --checkbox-color-hover:        var(--os-sky-hover);
+  --checkbox-border-color:       var(--os-border-teal);
+  --checkbox-border-color-hover: var(--os-cyan);
+
+  /* Toggle */
+  --toggle-color:       var(--os-sky);
+  --toggle-thumb-color: #ffffff;
+
+  /* Modal */
+  --modal-background:    var(--os-bg-05);
+  --modal-border-width:  1px;
+  --modal-border-color:  var(--os-border-teal);
+  --modal-radius:        4px;
+
+  /* Prompt / command palette */
+  --prompt-background:   var(--os-bg-00);
+  --prompt-border-width: 1px;
+  --prompt-border-color: var(--os-border-teal);
+  --prompt-max-width:    700px;
+  --prompt-max-height:   70vh;
+
+  /* Tooltip */
+  --tooltip-background: var(--os-bg-panel);
+  --tooltip-max-width:  300px;
+  --tooltip-font-size:  11px;
+
+  /* Font */
+  --font-text:             var(--os-font-ui);
+  --font-monospace:        var(--os-font-mono);
+  --font-interface:        var(--os-font-ui);
+  --font-text-size:        13px;
+  --font-text-line-height: 1.65;
+  --font-monospace-size:   13px;
+  --font-smallest:         10px;
+  --font-smaller:          11px;
+  --font-small:            12px;
+  --font-ui-smaller:       11px;
+  --font-ui-small:         12px;
+  --font-ui-medium:        13px;
+  --font-ui-large:         15px;
+}
+
+/* ── Light Mode ─────────────────────────────────────────────── */
+.theme-light {
+
+  /* ---- Raw Palette Tokens ---- */
+
+  /* Backgrounds */
+  --os-bg-warm:   #d1cabf;   /* warm beige: primary content  */
+  --os-bg-linen:  #e0ded2;   /* warm linen: primary-alt      */
+  --os-bg-gold:   #eeb157;   /* golden amber: sidebars       */
+  --os-bg-sand:   #beb6aa;   /* medium warm gray: chrome     */
+
+  /* Text */
+  --os-ink:       #2e3338;   /* near-black                   */
+  --os-ink-dim:   #694f3a;   /* warm brown                   */
+  --os-ink-ghost: #9c735c;   /* light brown                  */
+  --os-rust:      #914a29;   /* rust/terracotta: links       */
+  --os-slate:     #4d5c8b;   /* slate blue: H2               */
+  --os-red:       #cc0202;   /* red: hover accent            */
+
+  /* Accents */
+  --os-steel:  #1a7ca3;      /* steel blue: strong accent    */
+  --os-plum:   #912771;      /* magenta-purple: mild accent  */
+
+  /* Tags */
+  --os-tag-purple: rgb(141,81,128);  /* tag background       */
+  --os-tag-dark:   rgb(53,53,53);    /* tag text             */
+
+  /* ---- Obsidian Standard Variable Mappings ---- */
+
+  --background-primary:               var(--os-bg-warm);
+  --background-primary-alt:           var(--os-bg-linen);
+  --background-secondary:             var(--os-bg-gold);
+  --background-secondary-alt:         var(--os-bg-sand);
+  --background-modifier-hover:        rgba(0,0,0,0.08);
+  --background-modifier-active-hover: rgba(0,0,0,0.12);
+  --background-modifier-border:       rgba(0,0,0,0.2);
+  --background-modifier-border-hover: rgba(0,0,0,0.35);
+  --background-modifier-border-focus: var(--os-steel);
+  --background-modifier-error:        #ffe0e0;
+  --background-modifier-success:      #e0f5e9;
+  --background-modifier-form-field:   rgba(255,255,255,0.5);
+
+  --text-normal:              var(--os-ink);
+  --text-muted:               var(--os-ink-dim);
+  --text-faint:               var(--os-ink-ghost);
+  --text-accent:              var(--os-rust);
+  --text-accent-hover:        var(--os-red);
+  --text-on-accent:           #ffffff;
+  --text-error:               #cc0202;
+  --text-warning:             #8a5c00;
+  --text-success:             #1a6b35;
+  --text-selection:           rgba(26,124,163,0.2);
+  --text-highlight-bg:        rgba(200,150,0,0.22);
+  --text-highlight-bg-active: rgba(200,150,0,0.45);
+
+  --interactive-normal:       rgba(0,0,0,0.07);
+  --interactive-hover:        rgba(0,0,0,0.12);
+  --interactive-accent:       var(--os-steel);
+  --interactive-accent-hover: #155f80;
+  --interactive-accent-rgb:   26, 124, 163;
+
+  --color-accent:   var(--os-rust);
+  --color-accent-1: var(--os-steel);
+  --color-accent-2: #155f80;
+
+  --scrollbar-bg:              rgba(0,0,0,0.05);
+  --scrollbar-thumb-bg:        rgba(0,0,0,0.18);
+  --scrollbar-active-thumb-bg: var(--os-plum);
+
+  --graph-node:            var(--os-plum);
+  --graph-node-unresolved: rgba(145,39,113,0.4);
+  --graph-node-focused:    var(--os-steel);
+  --graph-node-tag:        var(--os-steel);
+  --graph-node-attachment: #2e8b57;
+  --graph-line:            rgba(0,0,0,0.25);
+  --graph-text:            var(--os-ink);
+  --graph-bg:              var(--os-bg-warm);
+
+  --tag-color:            var(--os-tag-dark);
+  --tag-background:       var(--os-tag-purple);
+  --tag-background-hover: #7a4570;
+  --tag-padding-x:        7px;
+  --tag-padding-y:        1px;
+  --tag-radius:           14px;
+  --tag-font-size:        11px;
+  --tag-weight:           500;
+
+  --nav-item-size:              12px;
+  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color-hover:       var(--os-ink);
+  --nav-item-color-active:      var(--os-rust);
+  --nav-item-color-highlighted: var(--os-red);
+  --nav-item-background-hover:  rgba(0,0,0,0.08);
+  --nav-item-background-active: rgba(145,74,41,0.12);
+  --nav-item-weight:            400;
+  --nav-folder-color:           var(--os-ink);
+  --nav-folder-color-hover:     var(--os-rust);
+  --nav-folder-color-active:    var(--os-rust);
+  --nav-folder-weight:          600;
+
+  --tab-text-color:                        var(--os-ink-dim);
+  --tab-text-color-focused:                var(--os-ink);
+  --tab-text-color-focused-active:         var(--os-rust);
+  --tab-text-color-focused-active-current: var(--os-ink);
+  --tab-background-active:                 var(--os-bg-warm);
+  --tab-outline-color:                     rgba(0,0,0,0.2);
+  --tab-divider-color:                     rgba(0,0,0,0.15);
+  --tab-radius:                            0px;
+  --tab-radius-active:                     0px;
+  --tab-container-background:              var(--os-bg-sand);
+
+  --h1-size:        1.9em;
+  --h2-size:        1.6em;
+  --h3-size:        1.25em;
+  --h4-size:        1.13em;
+  --h5-size:        0.94em;
+  --h6-size:        0.94em;
+  --h1-weight:      700;
+  --h2-weight:      700;
+  --h3-weight:      600;
+  --h4-weight:      600;
+  --h5-weight:      500;
+  --h6-weight:      400;
+  --h1-color:       var(--os-ink);
+  --h2-color:       var(--os-slate);
+  --h3-color:       var(--os-ink);
+  --h4-color:       var(--os-ink);
+  --h5-color:       var(--os-ink);
+  --h6-color:       var(--os-ink-dim);
+  --h1-font:        var(--os-font-ui);
+  --h2-font:        var(--os-font-ui);
+  --h3-font:        var(--os-font-ui);
+  --h4-font:        var(--os-font-ui);
+  --h5-font:        var(--os-font-ui);
+  --h6-font:        var(--os-font-ui);
+  --h6-style:       italic;
+
+  --code-background:  var(--os-bg-linen);
+  --code-normal:      var(--os-ink);
+  --code-comment:     var(--os-ink-dim);
+  --code-function:    var(--os-steel);
+  --code-important:   var(--os-plum);
+  --code-keyword:     var(--os-rust);
+  --code-operator:    #7c5a00;
+  --code-property:    var(--os-steel);
+  --code-punctuation: var(--os-ink-ghost);
+  --code-string:      #7c5a00;
+  --code-tag:         var(--os-plum);
+  --code-value:       var(--os-rust);
+
+  --hr-color:     rgba(0,0,0,0.22);
+  --hr-thickness: 1px;
+
+  --indentation-guide-color:        rgba(0,0,0,0.12);
+  --indentation-guide-color-active: rgba(0,0,0,0.28);
+
+  --border-color: rgba(0,0,0,0.2);
+
+  --embed-border-left:   2px solid rgba(0,0,0,0.22);
+  --embed-border-right:  none;
+  --embed-border-top:    none;
+  --embed-border-bottom: none;
+
+  --metadata-label-text-color: var(--os-ink-dim);
+  --metadata-input-text-color: var(--os-ink);
+  --metadata-background:       rgba(0,0,0,0.05);
+  --metadata-divider-color:    rgba(0,0,0,0.15);
+
+  --ribbon-background:           var(--os-bg-sand);
+  --ribbon-background-collapsed: var(--os-bg-sand);
+
+  --status-bar-background:   var(--os-bg-sand);
+  --status-bar-text-color:   var(--os-ink-dim);
+  --status-bar-border-color: transparent;
+  --status-bar-border-width: 0px;
+  --status-bar-font-size:    11px;
+
+  --titlebar-background:         var(--os-bg-sand);
+  --titlebar-background-focused: var(--os-bg-sand);
+  --titlebar-text-color:         var(--os-ink-dim);
+  --titlebar-text-color-focused: var(--os-ink);
+
+  --table-border-color:            rgba(0,0,0,0.15);
+  --table-header-background:       rgba(238,177,87,0.35);
+  --table-header-background-hover: rgba(238,177,87,0.6);
+  --table-header-border-color:     rgba(0,0,0,0.2);
+  --table-header-color:            var(--os-ink);
+  --table-row-background-hover:    rgba(0,0,0,0.05);
+  --table-row-alt-background:      rgba(255,255,255,0.3);
+
+  --checkbox-color:              var(--os-steel);
+  --checkbox-color-hover:        #155f80;
+  --checkbox-border-color:       rgba(0,0,0,0.3);
+  --checkbox-border-color-hover: var(--os-steel);
+
+  --toggle-color: var(--os-steel);
+
+  --modal-background:    var(--os-bg-linen);
+  --modal-border-color:  rgba(0,0,0,0.2);
+
+  --prompt-background:   var(--os-bg-linen);
+  --prompt-border-color: rgba(0,0,0,0.2);
+
+  --tooltip-background: var(--os-bg-gold);
+
+  --font-text:             var(--os-font-ui);
+  --font-monospace:        var(--os-font-mono);
+  --font-interface:        var(--os-font-ui);
+  --font-text-size:        13px;
+  --font-text-line-height: 1.65;
+  --font-monospace-size:   13px;
+  --font-smallest:         10px;
+  --font-smaller:          11px;
+  --font-small:            12px;
+  --font-ui-smaller:       11px;
+  --font-ui-small:         12px;
+  --font-ui-medium:        13px;
+  --font-ui-large:         15px;
+}

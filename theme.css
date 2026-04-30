@@ -1,0 +1,2181 @@
+/* ================================================================
+   ONO-SENDAI — Design Token System
+   All CSS custom properties. Imported by theme.css.
+   ================================================================ */
+
+/* ── Shared (theme-independent) ────────────────────────────── */
+:root {
+  --os-font-ui:    Cairo, Roboto, Inter, "Segoe UI", sans-serif;
+  --os-font-mono:  "Fira Code", "Source Code Pro", monospace;
+  --os-font-input: Barlow, Cairo, Inter, sans-serif;
+
+  /* Animation timing — snappy / mechanical feel */
+  --os-t-fast:   80ms linear;
+  --os-t-normal: 150ms linear;
+  --os-t-tab:    100ms linear;
+  --os-t-folder: 15ms linear;
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────── */
+.theme-dark {
+
+  /* ---- Raw Palette Tokens ---- */
+
+  /* Backgrounds */
+  --os-bg-00:      #000000;        /* pure black: chrome, ribbons        */
+  --os-bg-05:      #050505;        /* near-black: code blocks, alt bg    */
+  --os-bg-10:      #060809;        /* primary content background         */
+  --os-bg-panel:   #0f5172;        /* deep teal: sidebars, panels        */
+  --os-bg-hover:   rgb(38,72,95);  /* muted steel: hover / selected      */
+  --os-bg-ui:      #2a2a2a;        /* dark gray: interactive fills       */
+
+  /* Text */
+  --os-ink:        #dcddde;        /* primary off-white                  */
+  --os-ink-dim:    #898b85;        /* muted gray-green                   */
+  --os-ink-ghost:  #666666;        /* faint dim gray                     */
+  --os-cyan:       #28b0ff;        /* electric cyan-blue: links/accent   */
+  --os-green:      #00ff37;        /* terminal green: H2                 */
+  --os-green-dim:  #77d47c;        /* muted green: hover                 */
+  --os-yellow:     #bbce16;        /* yellow-green: search match         */
+
+  /* Borders */
+  --os-border-teal:    #0c496d;   /* dark teal: primary border          */
+  --os-border-crimson: #a00f3f;   /* deep crimson: accent border        */
+  --os-border-dark:    #272727;   /* dark charcoal: muted border        */
+
+  /* Interactive */
+  --os-hover-teal:  #286c91;          /* hover state                    */
+  --os-sky:         rgb(32,171,233);  /* sky blue: accent interactive   */
+  --os-sky-hover:   #1da3d6;          /* accent interactive hover       */
+
+  /* Scrollbars */
+  --os-scroll-track:    rgb(20,50,70);
+  --os-scroll-thumb:    rgba(255,255,255,0.2);
+  --os-scroll-hot:      #ff3392;   /* hot pink: active scrollbar thumb  */
+
+  /* Strong accents */
+  --os-hot-pink:  #e60953;        /* magenta-red: errors, badges        */
+  --os-amber:     #d39f2f;        /* warm amber: mild indicators        */
+
+  /* Tags */
+  --os-tag-navy:    rgb(10,54,134);   /* tag pill background            */
+  --os-tag-magenta: rgb(238,54,238);  /* tag panel text color           */
+
+  /* Graph */
+  --os-gfx-node:   #ff2882;
+  --os-gfx-edge:   #0c496d;
+  --os-gfx-label:  #ff3333;
+  --os-gfx-tag:    #0b9ba5;
+  --os-gfx-attach: #4cf15a;
+
+  /* ---- Obsidian Standard Variable Mappings ---- */
+
+  /* Backgrounds */
+  --background-primary:               var(--os-bg-10);
+  --background-primary-alt:           var(--os-bg-05);
+  --background-secondary:             var(--os-bg-panel);
+  --background-secondary-alt:         var(--os-bg-00);
+  --background-modifier-hover:        var(--os-bg-hover);
+  --background-modifier-active-hover: var(--os-bg-hover);
+  --background-modifier-border:       var(--os-border-teal);
+  --background-modifier-border-hover: var(--os-hover-teal);
+  --background-modifier-border-focus: var(--os-cyan);
+  --background-modifier-error:        #5c001f;
+  --background-modifier-error-rgb:    92, 0, 31;
+  --background-modifier-success:      #003a1a;
+  --background-modifier-message:      #1a0030;
+  --background-modifier-form-field:   #0c1f2e;
+
+  /* Text */
+  --text-normal:              var(--os-ink);
+  --text-muted:               var(--os-ink-dim);
+  --text-faint:               var(--os-ink-ghost);
+  --text-accent:              var(--os-cyan);
+  --text-accent-hover:        var(--os-green-dim);
+  --text-on-accent:           #ffffff;
+  --text-on-accent-muted:     rgba(255,255,255,0.65);
+  --text-error:               var(--os-hot-pink);
+  --text-warning:             var(--os-amber);
+  --text-success:             var(--os-green);
+  --text-selection:           rgba(40,176,255,0.18);
+  --text-highlight-bg:        rgba(187,206,22,0.28);
+  --text-highlight-bg-active: rgba(187,206,22,0.5);
+
+  /* Interactive */
+  --interactive-normal:       var(--os-bg-ui);
+  --interactive-hover:        var(--os-hover-teal);
+  --interactive-accent:       var(--os-sky);
+  --interactive-accent-hover: var(--os-sky-hover);
+  --interactive-accent-rgb:   32, 171, 233;
+
+  /* Accent */
+  --color-accent:   var(--os-cyan);
+  --color-accent-1: var(--os-sky);
+  --color-accent-2: var(--os-sky-hover);
+
+  /* Scrollbars */
+  --scrollbar-bg:              var(--os-scroll-track);
+  --scrollbar-thumb-bg:        var(--os-scroll-thumb);
+  --scrollbar-active-thumb-bg: var(--os-scroll-hot);
+
+  /* Graph */
+  --graph-node:            var(--os-gfx-node);
+  --graph-node-unresolved: rgba(255,40,130,0.35);
+  --graph-node-focused:    var(--os-cyan);
+  --graph-node-tag:        var(--os-gfx-tag);
+  --graph-node-attachment: var(--os-gfx-attach);
+  --graph-line:            var(--os-gfx-edge);
+  --graph-text:            var(--os-gfx-label);
+  --graph-bg:              var(--os-bg-00);
+
+  /* Tags */
+  --tag-color:            #ffffff;
+  --tag-background:       var(--os-tag-navy);
+  --tag-background-hover: var(--os-hover-teal);
+  --tag-padding-x:        7px;
+  --tag-padding-y:        1px;
+  --tag-radius:           14px;
+  --tag-font-size:        11px;
+  --tag-weight:           500;
+
+  /* Navigation (file explorer) */
+  --nav-item-size:              12px;
+  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color-hover:       var(--os-ink);
+  --nav-item-color-active:      var(--os-cyan);
+  --nav-item-color-highlighted: var(--os-yellow);
+  --nav-item-background-hover:  rgba(40,108,145,0.45);
+  --nav-item-background-active: rgba(40,176,255,0.12);
+  --nav-item-weight:            400;
+  --nav-item-weight-hover:      400;
+  --nav-item-weight-active:     600;
+  --nav-folder-color:           var(--os-ink);
+  --nav-folder-color-hover:     var(--os-cyan);
+  --nav-folder-color-active:    var(--os-cyan);
+  --nav-folder-weight:          600;
+  --nav-folder-weight-hover:    600;
+  --nav-folder-weight-active:   600;
+
+  /* Tabs */
+  --tab-text-color:                        var(--os-ink-ghost);
+  --tab-text-color-focused:                var(--os-ink-dim);
+  --tab-text-color-focused-active:         var(--os-ink);
+  --tab-text-color-focused-highlighted:    var(--os-yellow);
+  --tab-text-color-focused-active-current: var(--os-ink);
+  --tab-background-active:                 var(--os-bg-10);
+  --tab-outline-color:                     var(--os-border-teal);
+  --tab-divider-color:                     var(--os-border-dark);
+  --tab-radius:                            0px;
+  --tab-radius-active:                     0px;
+  --tab-font-size:                         var(--font-ui-small);
+  --tab-font-weight:                       400;
+  --tab-container-background:              var(--os-bg-00);
+
+  /* Headings */
+  --h1-size:        1.9em;
+  --h2-size:        1.6em;
+  --h3-size:        1.25em;
+  --h4-size:        1.13em;
+  --h5-size:        0.94em;
+  --h6-size:        0.94em;
+  --h1-line-height: 1.35;
+  --h2-line-height: 1.35;
+  --h3-line-height: 1.2;
+  --h4-line-height: 1.3;
+  --h5-line-height: 1.4;
+  --h6-line-height: 1.4;
+  --h1-weight:      700;
+  --h2-weight:      700;
+  --h3-weight:      600;
+  --h4-weight:      600;
+  --h5-weight:      500;
+  --h6-weight:      400;
+  --h1-color:       var(--os-ink);
+  --h2-color:       var(--os-green);
+  --h3-color:       var(--os-ink);
+  --h4-color:       var(--os-ink);
+  --h5-color:       var(--os-ink);
+  --h6-color:       var(--os-ink-dim);
+  --h1-font:        var(--os-font-ui);
+  --h2-font:        var(--os-font-ui);
+  --h3-font:        var(--os-font-ui);
+  --h4-font:        var(--os-font-ui);
+  --h5-font:        var(--os-font-ui);
+  --h6-font:        var(--os-font-ui);
+  --h1-style:       normal;
+  --h2-style:       normal;
+  --h3-style:       normal;
+  --h4-style:       normal;
+  --h5-style:       normal;
+  --h6-style:       italic;
+  --h1-variant:     normal;
+  --h2-variant:     normal;
+  --h3-variant:     normal;
+  --h4-variant:     normal;
+  --h5-variant:     normal;
+  --h6-variant:     normal;
+
+  /* Code */
+  --code-size:        0.85em;
+  --code-background:  var(--os-bg-05);
+  --code-normal:      var(--os-ink);
+  --code-comment:     var(--os-ink-dim);
+  --code-function:    var(--os-cyan);
+  --code-important:   var(--os-hot-pink);
+  --code-keyword:     var(--os-green);
+  --code-operator:    var(--os-amber);
+  --code-property:    var(--os-cyan);
+  --code-punctuation: var(--os-ink-ghost);
+  --code-string:      var(--os-amber);
+  --code-tag:         var(--os-hot-pink);
+  --code-value:       var(--os-green);
+
+  /* HR */
+  --hr-color:     var(--os-border-teal);
+  --hr-thickness: 1px;
+
+  /* Indentation guides */
+  --indentation-guide-width:        1px;
+  --indentation-guide-color:        rgba(12,73,109,0.55);
+  --indentation-guide-color-active: var(--os-border-teal);
+
+  /* Borders / radius */
+  --radius-s:     0px;
+  --radius-m:     4px;
+  --radius-l:     4px;
+  --radius-xl:    4px;
+  --border-width: 1px;
+  --border-color: var(--os-border-teal);
+
+  /* Divider */
+  --divider-color:       var(--os-border-dark);
+  --divider-color-hover: var(--os-border-teal);
+  --divider-width:       1px;
+  --divider-width-hover: 4px;
+
+  /* Embed / transclusion */
+  --embed-border-left:   2px solid var(--os-border-teal);
+  --embed-border-right:  none;
+  --embed-border-top:    none;
+  --embed-border-bottom: none;
+  --embed-background:    transparent;
+  --embed-padding:       0 0 0 12px;
+  --embed-font-style:    normal;
+
+  /* Metadata / frontmatter */
+  --metadata-label-text-color: var(--os-ink-dim);
+  --metadata-input-text-color: var(--os-ink);
+  --metadata-background:       var(--os-bg-05);
+  --metadata-divider-color:    var(--os-border-dark);
+
+  /* Ribbon */
+  --ribbon-background:           var(--os-bg-00);
+  --ribbon-background-collapsed: var(--os-bg-00);
+  --ribbon-width:                34px;
+
+  /* Status bar */
+  --status-bar-background:   var(--os-bg-00);
+  --status-bar-text-color:   var(--os-ink-ghost);
+  --status-bar-border-color: transparent;
+  --status-bar-border-width: 0px;
+  --status-bar-font-size:    11px;
+  --status-bar-radius:       0px;
+
+  /* Titlebar */
+  --titlebar-background:         var(--os-bg-00);
+  --titlebar-background-focused: #080808;
+  --titlebar-border-width:       0px;
+  --titlebar-border-color:       var(--os-border-dark);
+  --titlebar-text-color:         var(--os-ink-ghost);
+  --titlebar-text-color-focused: var(--os-ink-dim);
+
+  /* Table */
+  --table-border-width:              1px;
+  --table-border-color:              var(--os-border-dark);
+  --table-header-background:         rgba(15,81,114,0.5);
+  --table-header-background-hover:   rgba(40,108,145,0.5);
+  --table-header-border-width:       1px;
+  --table-header-border-color:       var(--os-border-teal);
+  --table-header-color:              var(--os-ink);
+  --table-header-weight:             600;
+  --table-row-background-hover:      rgba(40,108,145,0.15);
+  --table-row-alt-background:        rgba(5,5,5,0.4);
+
+  /* Callout */
+  --callout-border-width:   1px;
+  --callout-border-opacity: 0.4;
+  --callout-padding:        8px 12px;
+  --callout-radius:         4px;
+  --callout-title-size:     0.9em;
+
+  /* Input */
+  --input-height:       28px;
+  --input-radius:       4px;
+  --input-border-width: 1px;
+
+  /* Checkbox */
+  --checkbox-radius:             2px;
+  --checkbox-size:               14px;
+  --checkbox-marker-color:       #ffffff;
+  --checkbox-color:              var(--os-sky);
+  --checkbox-color-hover:        var(--os-sky-hover);
+  --checkbox-border-color:       var(--os-border-teal);
+  --checkbox-border-color-hover: var(--os-cyan);
+
+  /* Toggle */
+  --toggle-color:       var(--os-sky);
+  --toggle-thumb-color: #ffffff;
+
+  /* Modal */
+  --modal-background:    var(--os-bg-05);
+  --modal-border-width:  1px;
+  --modal-border-color:  var(--os-border-teal);
+  --modal-radius:        4px;
+
+  /* Prompt / command palette */
+  --prompt-background:   var(--os-bg-00);
+  --prompt-border-width: 1px;
+  --prompt-border-color: var(--os-border-teal);
+  --prompt-max-width:    700px;
+  --prompt-max-height:   70vh;
+
+  /* Tooltip */
+  --tooltip-background: var(--os-bg-panel);
+  --tooltip-max-width:  300px;
+  --tooltip-font-size:  11px;
+
+  /* Font */
+  --font-text:             var(--os-font-ui);
+  --font-monospace:        var(--os-font-mono);
+  --font-interface:        var(--os-font-ui);
+  --font-text-size:        13px;
+  --font-text-line-height: 1.65;
+  --font-monospace-size:   13px;
+  --font-smallest:         10px;
+  --font-smaller:          11px;
+  --font-small:            12px;
+  --font-ui-smaller:       11px;
+  --font-ui-small:         12px;
+  --font-ui-medium:        13px;
+  --font-ui-large:         15px;
+}
+
+/* ── Light Mode ─────────────────────────────────────────────── */
+.theme-light {
+
+  /* ---- Raw Palette Tokens ---- */
+
+  /* Backgrounds */
+  --os-bg-warm:   #d1cabf;   /* warm beige: primary content  */
+  --os-bg-linen:  #e0ded2;   /* warm linen: primary-alt      */
+  --os-bg-gold:   #eeb157;   /* golden amber: sidebars       */
+  --os-bg-sand:   #beb6aa;   /* medium warm gray: chrome     */
+
+  /* Text */
+  --os-ink:       #2e3338;   /* near-black                   */
+  --os-ink-dim:   #694f3a;   /* warm brown                   */
+  --os-ink-ghost: #9c735c;   /* light brown                  */
+  --os-rust:      #914a29;   /* rust/terracotta: links       */
+  --os-slate:     #4d5c8b;   /* slate blue: H2               */
+  --os-red:       #cc0202;   /* red: hover accent            */
+
+  /* Accents */
+  --os-steel:  #1a7ca3;      /* steel blue: strong accent    */
+  --os-plum:   #912771;      /* magenta-purple: mild accent  */
+
+  /* Tags */
+  --os-tag-purple: rgb(141,81,128);  /* tag background       */
+  --os-tag-dark:   rgb(53,53,53);    /* tag text             */
+
+  /* ---- Obsidian Standard Variable Mappings ---- */
+
+  --background-primary:               var(--os-bg-warm);
+  --background-primary-alt:           var(--os-bg-linen);
+  --background-secondary:             var(--os-bg-gold);
+  --background-secondary-alt:         var(--os-bg-sand);
+  --background-modifier-hover:        rgba(0,0,0,0.08);
+  --background-modifier-active-hover: rgba(0,0,0,0.12);
+  --background-modifier-border:       rgba(0,0,0,0.2);
+  --background-modifier-border-hover: rgba(0,0,0,0.35);
+  --background-modifier-border-focus: var(--os-steel);
+  --background-modifier-error:        #ffe0e0;
+  --background-modifier-success:      #e0f5e9;
+  --background-modifier-form-field:   rgba(255,255,255,0.5);
+
+  --text-normal:              var(--os-ink);
+  --text-muted:               var(--os-ink-dim);
+  --text-faint:               var(--os-ink-ghost);
+  --text-accent:              var(--os-rust);
+  --text-accent-hover:        var(--os-red);
+  --text-on-accent:           #ffffff;
+  --text-error:               #cc0202;
+  --text-warning:             #8a5c00;
+  --text-success:             #1a6b35;
+  --text-selection:           rgba(26,124,163,0.2);
+  --text-highlight-bg:        rgba(200,150,0,0.22);
+  --text-highlight-bg-active: rgba(200,150,0,0.45);
+
+  --interactive-normal:       rgba(0,0,0,0.07);
+  --interactive-hover:        rgba(0,0,0,0.12);
+  --interactive-accent:       var(--os-steel);
+  --interactive-accent-hover: #155f80;
+  --interactive-accent-rgb:   26, 124, 163;
+
+  --color-accent:   var(--os-rust);
+  --color-accent-1: var(--os-steel);
+  --color-accent-2: #155f80;
+
+  --scrollbar-bg:              rgba(0,0,0,0.05);
+  --scrollbar-thumb-bg:        rgba(0,0,0,0.18);
+  --scrollbar-active-thumb-bg: var(--os-plum);
+
+  --graph-node:            var(--os-plum);
+  --graph-node-unresolved: rgba(145,39,113,0.4);
+  --graph-node-focused:    var(--os-steel);
+  --graph-node-tag:        var(--os-steel);
+  --graph-node-attachment: #2e8b57;
+  --graph-line:            rgba(0,0,0,0.25);
+  --graph-text:            var(--os-ink);
+  --graph-bg:              var(--os-bg-warm);
+
+  --tag-color:            var(--os-tag-dark);
+  --tag-background:       var(--os-tag-purple);
+  --tag-background-hover: #7a4570;
+  --tag-padding-x:        7px;
+  --tag-padding-y:        1px;
+  --tag-radius:           14px;
+  --tag-font-size:        11px;
+  --tag-weight:           500;
+
+  --nav-item-size:              12px;
+  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color-hover:       var(--os-ink);
+  --nav-item-color-active:      var(--os-rust);
+  --nav-item-color-highlighted: var(--os-red);
+  --nav-item-background-hover:  rgba(0,0,0,0.08);
+  --nav-item-background-active: rgba(145,74,41,0.12);
+  --nav-item-weight:            400;
+  --nav-folder-color:           var(--os-ink);
+  --nav-folder-color-hover:     var(--os-rust);
+  --nav-folder-color-active:    var(--os-rust);
+  --nav-folder-weight:          600;
+
+  --tab-text-color:                        var(--os-ink-dim);
+  --tab-text-color-focused:                var(--os-ink);
+  --tab-text-color-focused-active:         var(--os-rust);
+  --tab-text-color-focused-active-current: var(--os-ink);
+  --tab-background-active:                 var(--os-bg-warm);
+  --tab-outline-color:                     rgba(0,0,0,0.2);
+  --tab-divider-color:                     rgba(0,0,0,0.15);
+  --tab-radius:                            0px;
+  --tab-radius-active:                     0px;
+  --tab-container-background:              var(--os-bg-sand);
+
+  --h1-size:        1.9em;
+  --h2-size:        1.6em;
+  --h3-size:        1.25em;
+  --h4-size:        1.13em;
+  --h5-size:        0.94em;
+  --h6-size:        0.94em;
+  --h1-weight:      700;
+  --h2-weight:      700;
+  --h3-weight:      600;
+  --h4-weight:      600;
+  --h5-weight:      500;
+  --h6-weight:      400;
+  --h1-color:       var(--os-ink);
+  --h2-color:       var(--os-slate);
+  --h3-color:       var(--os-ink);
+  --h4-color:       var(--os-ink);
+  --h5-color:       var(--os-ink);
+  --h6-color:       var(--os-ink-dim);
+  --h1-font:        var(--os-font-ui);
+  --h2-font:        var(--os-font-ui);
+  --h3-font:        var(--os-font-ui);
+  --h4-font:        var(--os-font-ui);
+  --h5-font:        var(--os-font-ui);
+  --h6-font:        var(--os-font-ui);
+  --h6-style:       italic;
+
+  --code-background:  var(--os-bg-linen);
+  --code-normal:      var(--os-ink);
+  --code-comment:     var(--os-ink-dim);
+  --code-function:    var(--os-steel);
+  --code-important:   var(--os-plum);
+  --code-keyword:     var(--os-rust);
+  --code-operator:    #7c5a00;
+  --code-property:    var(--os-steel);
+  --code-punctuation: var(--os-ink-ghost);
+  --code-string:      #7c5a00;
+  --code-tag:         var(--os-plum);
+  --code-value:       var(--os-rust);
+
+  --hr-color:     rgba(0,0,0,0.22);
+  --hr-thickness: 1px;
+
+  --indentation-guide-color:        rgba(0,0,0,0.12);
+  --indentation-guide-color-active: rgba(0,0,0,0.28);
+
+  --border-color: rgba(0,0,0,0.2);
+
+  --embed-border-left:   2px solid rgba(0,0,0,0.22);
+  --embed-border-right:  none;
+  --embed-border-top:    none;
+  --embed-border-bottom: none;
+
+  --metadata-label-text-color: var(--os-ink-dim);
+  --metadata-input-text-color: var(--os-ink);
+  --metadata-background:       rgba(0,0,0,0.05);
+  --metadata-divider-color:    rgba(0,0,0,0.15);
+
+  --ribbon-background:           var(--os-bg-sand);
+  --ribbon-background-collapsed: var(--os-bg-sand);
+
+  --status-bar-background:   var(--os-bg-sand);
+  --status-bar-text-color:   var(--os-ink-dim);
+  --status-bar-border-color: transparent;
+  --status-bar-border-width: 0px;
+  --status-bar-font-size:    11px;
+
+  --titlebar-background:         var(--os-bg-sand);
+  --titlebar-background-focused: var(--os-bg-sand);
+  --titlebar-text-color:         var(--os-ink-dim);
+  --titlebar-text-color-focused: var(--os-ink);
+
+  --table-border-color:            rgba(0,0,0,0.15);
+  --table-header-background:       rgba(238,177,87,0.35);
+  --table-header-background-hover: rgba(238,177,87,0.6);
+  --table-header-border-color:     rgba(0,0,0,0.2);
+  --table-header-color:            var(--os-ink);
+  --table-row-background-hover:    rgba(0,0,0,0.05);
+  --table-row-alt-background:      rgba(255,255,255,0.3);
+
+  --checkbox-color:              var(--os-steel);
+  --checkbox-color-hover:        #155f80;
+  --checkbox-border-color:       rgba(0,0,0,0.3);
+  --checkbox-border-color-hover: var(--os-steel);
+
+  --toggle-color: var(--os-steel);
+
+  --modal-background:    var(--os-bg-linen);
+  --modal-border-color:  rgba(0,0,0,0.2);
+
+  --prompt-background:   var(--os-bg-linen);
+  --prompt-border-color: rgba(0,0,0,0.2);
+
+  --tooltip-background: var(--os-bg-gold);
+
+  --font-text:             var(--os-font-ui);
+  --font-monospace:        var(--os-font-mono);
+  --font-interface:        var(--os-font-ui);
+  --font-text-size:        13px;
+  --font-text-line-height: 1.65;
+  --font-monospace-size:   13px;
+  --font-smallest:         10px;
+  --font-smaller:          11px;
+  --font-small:            12px;
+  --font-ui-smaller:       11px;
+  --font-ui-small:         12px;
+  --font-ui-medium:        13px;
+  --font-ui-large:         15px;
+}
+/* ================================================================
+   ONO-SENDAI — Obsidian Theme  v1.0.0
+   Terminal-retro dark theme for Obsidian v1.6+
+   ================================================================ */
+
+/* ================================================================
+   DESIGN TOKENS
+   ================================================================ */
+
+/* ── Shared ─────────────────────────────────────────────────── */
+:root {
+  --os-font-ui:    Cairo, Roboto, Inter, "Segoe UI", sans-serif;
+  --os-font-mono:  "Fira Code", "Source Code Pro", monospace;
+  --os-font-input: Barlow, Cairo, Inter, sans-serif;
+
+  --os-t-fast:   80ms linear;
+  --os-t-normal: 150ms linear;
+  --os-t-tab:    100ms linear;
+  --os-t-folder: 15ms linear;
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────── */
+.theme-dark {
+
+  /* Raw Palette */
+  --os-bg-00:      #000000;
+  --os-bg-05:      #050505;
+  --os-bg-10:      #060809;
+  --os-bg-panel:   #0d1720;
+  --os-bg-hover:   rgba(12,73,109,0.5);
+  --os-bg-ui:      #2a2a2a;
+
+  --os-ink:        #dcddde;
+  --os-ink-dim:    #898b85;
+  --os-ink-ghost:  #666666;
+  --os-cyan:       #28b0ff;
+  --os-green:      #00ff37;
+  --os-green-dim:  #77d47c;
+  --os-yellow:     #bbce16;
+
+  --os-border-teal:    #0c496d;
+  --os-border-crimson: #a00f3f;
+  --os-border-dark:    #272727;
+
+  --os-hover-teal:  #286c91;
+  --os-sky:         rgb(32,171,233);
+  --os-sky-hover:   #1da3d6;
+
+  --os-scroll-track: rgb(20,50,70);
+  --os-scroll-thumb: rgba(255,255,255,0.2);
+  --os-scroll-hot:   #ff3392;
+
+  --os-hot-pink:  #e60953;
+  --os-amber:     #d39f2f;
+
+  --os-tag-navy:    rgb(10,54,134);
+  --os-tag-magenta: rgb(238,54,238);
+
+  --os-gfx-node:   #ff2882;
+  --os-gfx-edge:   #0c496d;
+  --os-gfx-label:  #ff3333;
+  --os-gfx-tag:    #0b9ba5;
+  --os-gfx-attach: #4cf15a;
+
+  /* Obsidian Standard Mappings */
+  --background-primary:               var(--os-bg-10);
+  --background-primary-alt:           var(--os-bg-05);
+  --background-secondary:             var(--os-bg-panel);
+  --background-secondary-alt:         var(--os-bg-00);
+  --background-modifier-hover:        var(--os-bg-hover);
+  --background-modifier-active-hover: var(--os-bg-hover);
+  --background-modifier-border:       var(--os-border-teal);
+  --background-modifier-border-hover: var(--os-hover-teal);
+  --background-modifier-border-focus: var(--os-cyan);
+  --background-modifier-error:        #5c001f;
+  --background-modifier-error-rgb:    92, 0, 31;
+  --background-modifier-success:      #003a1a;
+  --background-modifier-message:      #1a0030;
+  --background-modifier-form-field:   #0c1f2e;
+
+  --text-normal:              var(--os-ink);
+  --text-muted:               var(--os-ink-dim);
+  --text-faint:               var(--os-ink-ghost);
+  --text-accent:              var(--os-cyan);
+  --text-accent-hover:        var(--os-green-dim);
+  --text-on-accent:           #ffffff;
+  --text-on-accent-muted:     rgba(255,255,255,0.65);
+  --text-error:               var(--os-hot-pink);
+  --text-warning:             var(--os-amber);
+  --text-success:             var(--os-green);
+  --text-selection:           rgba(40,176,255,0.18);
+  --text-highlight-bg:        rgba(187,206,22,0.28);
+  --text-highlight-bg-active: rgba(187,206,22,0.5);
+
+  --interactive-normal:       var(--os-bg-ui);
+  --interactive-hover:        var(--os-hover-teal);
+  --interactive-accent:       var(--os-sky);
+  --interactive-accent-hover: var(--os-sky-hover);
+  --interactive-accent-rgb:   32, 171, 233;
+
+  --color-accent:   var(--os-cyan);
+  --color-accent-1: var(--os-sky);
+  --color-accent-2: var(--os-sky-hover);
+
+  --scrollbar-bg:              var(--os-scroll-track);
+  --scrollbar-thumb-bg:        var(--os-scroll-thumb);
+  --scrollbar-active-thumb-bg: var(--os-scroll-hot);
+
+  --graph-node:            var(--os-gfx-node);
+  --graph-node-unresolved: rgba(255,40,130,0.35);
+  --graph-node-focused:    var(--os-cyan);
+  --graph-node-tag:        var(--os-gfx-tag);
+  --graph-node-attachment: var(--os-gfx-attach);
+  --graph-line:            var(--os-gfx-edge);
+  --graph-text:            var(--os-gfx-label);
+  --graph-bg:              var(--os-bg-00);
+
+  --tag-color:            #ffffff;
+  --tag-background:       var(--os-tag-navy);
+  --tag-background-hover: var(--os-hover-teal);
+  --tag-padding-x:        7px;
+  --tag-padding-y:        1px;
+  --tag-radius:           14px;
+  --tag-font-size:        11px;
+  --tag-weight:           500;
+
+  --nav-item-size:              12px;
+  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color-hover:       var(--os-ink);
+  --nav-item-color-active:      var(--os-cyan);
+  --nav-item-color-highlighted: var(--os-yellow);
+  --nav-item-background-hover:  rgba(40,108,145,0.45);
+  --nav-item-background-active: rgba(40,176,255,0.12);
+  --nav-item-weight:            400;
+  --nav-item-weight-hover:      400;
+  --nav-item-weight-active:     600;
+  --nav-folder-color:           var(--os-ink);
+  --nav-folder-color-hover:     var(--os-cyan);
+  --nav-folder-color-active:    var(--os-cyan);
+  --nav-folder-weight:          600;
+  --nav-folder-weight-hover:    600;
+  --nav-folder-weight-active:   600;
+
+  --tab-text-color:                        var(--os-ink-ghost);
+  --tab-text-color-focused:                var(--os-ink-dim);
+  --tab-text-color-focused-active:         var(--os-ink);
+  --tab-text-color-focused-highlighted:    var(--os-yellow);
+  --tab-text-color-focused-active-current: var(--os-ink);
+  --tab-background-active:                 var(--os-bg-10);
+  --tab-outline-color:                     var(--os-border-teal);
+  --tab-divider-color:                     var(--os-border-dark);
+  --tab-radius:                            0px;
+  --tab-radius-active:                     0px;
+  --tab-font-size:                         var(--font-ui-small);
+  --tab-font-weight:                       400;
+  --tab-container-background:              var(--os-bg-00);
+
+  --h1-size:        1.9em;
+  --h2-size:        1.6em;
+  --h3-size:        1.25em;
+  --h4-size:        1.13em;
+  --h5-size:        0.94em;
+  --h6-size:        0.94em;
+  --h1-line-height: 1.35;
+  --h2-line-height: 1.35;
+  --h3-line-height: 1.2;
+  --h4-line-height: 1.3;
+  --h5-line-height: 1.4;
+  --h6-line-height: 1.4;
+  --h1-weight:      700;
+  --h2-weight:      700;
+  --h3-weight:      600;
+  --h4-weight:      600;
+  --h5-weight:      500;
+  --h6-weight:      400;
+  --h1-color:       var(--os-ink);
+  --h2-color:       var(--os-green);
+  --h3-color:       var(--os-ink);
+  --h4-color:       var(--os-ink);
+  --h5-color:       var(--os-ink);
+  --h6-color:       var(--os-ink-dim);
+  --h1-font:        var(--os-font-ui);
+  --h2-font:        var(--os-font-ui);
+  --h3-font:        var(--os-font-ui);
+  --h4-font:        var(--os-font-ui);
+  --h5-font:        var(--os-font-ui);
+  --h6-font:        var(--os-font-ui);
+  --h1-style:       normal;
+  --h2-style:       normal;
+  --h3-style:       normal;
+  --h4-style:       normal;
+  --h5-style:       normal;
+  --h6-style:       italic;
+  --h1-variant:     normal;
+  --h2-variant:     normal;
+  --h3-variant:     normal;
+  --h4-variant:     normal;
+  --h5-variant:     normal;
+  --h6-variant:     normal;
+
+  --code-size:        0.85em;
+  --code-background:  var(--os-bg-05);
+  --code-normal:      var(--os-ink);
+  --code-comment:     var(--os-ink-dim);
+  --code-function:    var(--os-cyan);
+  --code-important:   var(--os-hot-pink);
+  --code-keyword:     var(--os-green);
+  --code-operator:    var(--os-amber);
+  --code-property:    var(--os-cyan);
+  --code-punctuation: var(--os-ink-ghost);
+  --code-string:      var(--os-amber);
+  --code-tag:         var(--os-hot-pink);
+  --code-value:       var(--os-green);
+
+  --hr-color:     var(--os-border-teal);
+  --hr-thickness: 1px;
+
+  --indentation-guide-width:        1px;
+  --indentation-guide-color:        rgba(12,73,109,0.55);
+  --indentation-guide-color-active: var(--os-border-teal);
+
+  --radius-s:     0px;
+  --radius-m:     4px;
+  --radius-l:     4px;
+  --radius-xl:    4px;
+  --border-width: 1px;
+  --border-color: var(--os-border-teal);
+
+  --divider-color:       var(--os-border-dark);
+  --divider-color-hover: var(--os-border-teal);
+  --divider-width:       1px;
+  --divider-width-hover: 4px;
+
+  --embed-border-left:   2px solid var(--os-border-teal);
+  --embed-border-right:  none;
+  --embed-border-top:    none;
+  --embed-border-bottom: none;
+  --embed-background:    transparent;
+  --embed-padding:       0 0 0 12px;
+  --embed-font-style:    normal;
+
+  --metadata-label-text-color: var(--os-ink-dim);
+  --metadata-input-text-color: var(--os-ink);
+  --metadata-background:       var(--os-bg-05);
+  --metadata-divider-color:    var(--os-border-dark);
+
+  --ribbon-background:           var(--os-bg-00);
+  --ribbon-background-collapsed: var(--os-bg-00);
+  --ribbon-width:                34px;
+
+  --status-bar-background:   var(--os-bg-00);
+  --status-bar-text-color:   var(--os-ink-ghost);
+  --status-bar-border-color: transparent;
+  --status-bar-border-width: 0px;
+  --status-bar-font-size:    11px;
+  --status-bar-radius:       0px;
+
+  --titlebar-background:         var(--os-bg-00);
+  --titlebar-background-focused: #080808;
+  --titlebar-border-width:       0px;
+  --titlebar-border-color:       var(--os-border-dark);
+  --titlebar-text-color:         var(--os-ink-ghost);
+  --titlebar-text-color-focused: var(--os-ink-dim);
+
+  --table-border-width:            1px;
+  --table-border-color:            var(--os-border-dark);
+  --table-header-background:       rgba(15,81,114,0.5);
+  --table-header-background-hover: rgba(40,108,145,0.5);
+  --table-header-border-width:     1px;
+  --table-header-border-color:     var(--os-border-teal);
+  --table-header-color:            var(--os-ink);
+  --table-header-weight:           600;
+  --table-row-background-hover:    rgba(40,108,145,0.15);
+  --table-row-alt-background:      rgba(5,5,5,0.4);
+
+  --callout-border-width:   1px;
+  --callout-border-opacity: 0.4;
+  --callout-padding:        8px 12px;
+  --callout-radius:         4px;
+  --callout-title-size:     0.9em;
+
+  --input-height:       28px;
+  --input-radius:       4px;
+  --input-border-width: 1px;
+
+  --checkbox-radius:             2px;
+  --checkbox-size:               14px;
+  --checkbox-marker-color:       #ffffff;
+  --checkbox-color:              var(--os-sky);
+  --checkbox-color-hover:        var(--os-sky-hover);
+  --checkbox-border-color:       var(--os-border-teal);
+  --checkbox-border-color-hover: var(--os-cyan);
+
+  --toggle-color:       var(--os-sky);
+  --toggle-thumb-color: #ffffff;
+
+  --modal-background:    var(--os-bg-05);
+  --modal-border-width:  1px;
+  --modal-border-color:  var(--os-border-teal);
+  --modal-radius:        4px;
+
+  --prompt-background:   var(--os-bg-00);
+  --prompt-border-width: 1px;
+  --prompt-border-color: var(--os-border-teal);
+  --prompt-max-width:    700px;
+  --prompt-max-height:   70vh;
+
+  --tooltip-background: var(--os-bg-panel);
+  --tooltip-max-width:  300px;
+  --tooltip-font-size:  11px;
+
+  --font-text:             var(--os-font-ui);
+  --font-monospace:        var(--os-font-mono);
+  --font-interface:        var(--os-font-ui);
+  --font-text-size:        13px;
+  --font-text-line-height: 1.65;
+  --font-monospace-size:   13px;
+  --font-smallest:         10px;
+  --font-smaller:          11px;
+  --font-small:            12px;
+  --font-ui-smaller:       11px;
+  --font-ui-small:         12px;
+  --font-ui-medium:        13px;
+  --font-ui-large:         15px;
+  --footnote-size:         0.85em;
+}
+
+/* ── Light Mode ─────────────────────────────────────────────── */
+.theme-light {
+
+  /* Raw Palette */
+  --os-bg-warm:   #d1cabf;
+  --os-bg-linen:  #e0ded2;
+  --os-bg-gold:   #eeb157;
+  --os-bg-sand:   #beb6aa;
+
+  --os-ink:       #2e3338;
+  --os-ink-dim:   #694f3a;
+  --os-ink-ghost: #9c735c;
+  --os-rust:      #914a29;
+  --os-slate:     #4d5c8b;
+  --os-red:       #cc0202;
+
+  --os-steel:  #1a7ca3;
+  --os-plum:   #912771;
+
+  --os-tag-purple: rgb(141,81,128);
+  --os-tag-dark:   rgb(53,53,53);
+
+  /* Obsidian Standard Mappings */
+  --background-primary:               var(--os-bg-warm);
+  --background-primary-alt:           var(--os-bg-linen);
+  --background-secondary:             var(--os-bg-gold);
+  --background-secondary-alt:         var(--os-bg-sand);
+  --background-modifier-hover:        rgba(0,0,0,0.08);
+  --background-modifier-active-hover: rgba(0,0,0,0.12);
+  --background-modifier-border:       rgba(0,0,0,0.2);
+  --background-modifier-border-hover: rgba(0,0,0,0.35);
+  --background-modifier-border-focus: var(--os-steel);
+  --background-modifier-error:        #ffe0e0;
+  --background-modifier-success:      #e0f5e9;
+  --background-modifier-form-field:   rgba(255,255,255,0.5);
+
+  --text-normal:              var(--os-ink);
+  --text-muted:               var(--os-ink-dim);
+  --text-faint:               var(--os-ink-ghost);
+  --text-accent:              var(--os-rust);
+  --text-accent-hover:        var(--os-red);
+  --text-on-accent:           #ffffff;
+  --text-error:               #cc0202;
+  --text-warning:             #8a5c00;
+  --text-success:             #1a6b35;
+  --text-selection:           rgba(26,124,163,0.2);
+  --text-highlight-bg:        rgba(200,150,0,0.22);
+  --text-highlight-bg-active: rgba(200,150,0,0.45);
+
+  --interactive-normal:       rgba(0,0,0,0.07);
+  --interactive-hover:        rgba(0,0,0,0.12);
+  --interactive-accent:       var(--os-steel);
+  --interactive-accent-hover: #155f80;
+  --interactive-accent-rgb:   26, 124, 163;
+
+  --color-accent:   var(--os-rust);
+  --color-accent-1: var(--os-steel);
+  --color-accent-2: #155f80;
+
+  --scrollbar-bg:              rgba(0,0,0,0.05);
+  --scrollbar-thumb-bg:        rgba(0,0,0,0.18);
+  --scrollbar-active-thumb-bg: var(--os-plum);
+
+  --graph-node:            var(--os-plum);
+  --graph-node-unresolved: rgba(145,39,113,0.4);
+  --graph-node-focused:    var(--os-steel);
+  --graph-node-tag:        var(--os-steel);
+  --graph-node-attachment: #2e8b57;
+  --graph-line:            rgba(0,0,0,0.25);
+  --graph-text:            var(--os-ink);
+  --graph-bg:              var(--os-bg-warm);
+
+  --tag-color:            var(--os-tag-dark);
+  --tag-background:       var(--os-tag-purple);
+  --tag-background-hover: #7a4570;
+  --tag-padding-x:        7px;
+  --tag-padding-y:        1px;
+  --tag-radius:           14px;
+  --tag-font-size:        11px;
+  --tag-weight:           500;
+
+  --nav-item-size:              12px;
+  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color-hover:       var(--os-ink);
+  --nav-item-color-active:      var(--os-rust);
+  --nav-item-color-highlighted: var(--os-red);
+  --nav-item-background-hover:  rgba(0,0,0,0.08);
+  --nav-item-background-active: rgba(145,74,41,0.12);
+  --nav-item-weight:            400;
+  --nav-folder-color:           var(--os-ink);
+  --nav-folder-color-hover:     var(--os-rust);
+  --nav-folder-color-active:    var(--os-rust);
+  --nav-folder-weight:          600;
+
+  --tab-text-color:                        var(--os-ink-dim);
+  --tab-text-color-focused:                var(--os-ink);
+  --tab-text-color-focused-active:         var(--os-rust);
+  --tab-text-color-focused-active-current: var(--os-ink);
+  --tab-background-active:                 var(--os-bg-warm);
+  --tab-outline-color:                     rgba(0,0,0,0.2);
+  --tab-divider-color:                     rgba(0,0,0,0.15);
+  --tab-radius:                            0px;
+  --tab-radius-active:                     0px;
+  --tab-container-background:              var(--os-bg-sand);
+
+  --h1-size:        1.9em;
+  --h2-size:        1.6em;
+  --h3-size:        1.25em;
+  --h4-size:        1.13em;
+  --h5-size:        0.94em;
+  --h6-size:        0.94em;
+  --h1-weight:      700;
+  --h2-weight:      700;
+  --h3-weight:      600;
+  --h4-weight:      600;
+  --h5-weight:      500;
+  --h6-weight:      400;
+  --h1-color:       var(--os-ink);
+  --h2-color:       var(--os-slate);
+  --h3-color:       var(--os-ink);
+  --h4-color:       var(--os-ink);
+  --h5-color:       var(--os-ink);
+  --h6-color:       var(--os-ink-dim);
+  --h1-font:        var(--os-font-ui);
+  --h2-font:        var(--os-font-ui);
+  --h3-font:        var(--os-font-ui);
+  --h4-font:        var(--os-font-ui);
+  --h5-font:        var(--os-font-ui);
+  --h6-font:        var(--os-font-ui);
+  --h6-style:       italic;
+
+  --code-background:  var(--os-bg-linen);
+  --code-normal:      var(--os-ink);
+  --code-comment:     var(--os-ink-dim);
+  --code-function:    var(--os-steel);
+  --code-important:   var(--os-plum);
+  --code-keyword:     var(--os-rust);
+  --code-operator:    #7c5a00;
+  --code-property:    var(--os-steel);
+  --code-punctuation: var(--os-ink-ghost);
+  --code-string:      #7c5a00;
+  --code-tag:         var(--os-plum);
+  --code-value:       var(--os-rust);
+
+  --hr-color:     rgba(0,0,0,0.22);
+  --hr-thickness: 1px;
+
+  --indentation-guide-color:        rgba(0,0,0,0.12);
+  --indentation-guide-color-active: rgba(0,0,0,0.28);
+
+  --border-color: rgba(0,0,0,0.2);
+
+  --embed-border-left:   2px solid rgba(0,0,0,0.22);
+  --embed-border-right:  none;
+  --embed-border-top:    none;
+  --embed-border-bottom: none;
+
+  --metadata-label-text-color: var(--os-ink-dim);
+  --metadata-input-text-color: var(--os-ink);
+  --metadata-background:       rgba(0,0,0,0.05);
+  --metadata-divider-color:    rgba(0,0,0,0.15);
+
+  --ribbon-background:           var(--os-bg-sand);
+  --ribbon-background-collapsed: var(--os-bg-sand);
+
+  --status-bar-background:   var(--os-bg-sand);
+  --status-bar-text-color:   var(--os-ink-dim);
+  --status-bar-border-color: transparent;
+  --status-bar-border-width: 0px;
+  --status-bar-font-size:    11px;
+
+  --titlebar-background:         var(--os-bg-sand);
+  --titlebar-background-focused: var(--os-bg-sand);
+  --titlebar-text-color:         var(--os-ink-dim);
+  --titlebar-text-color-focused: var(--os-ink);
+
+  --table-border-color:            rgba(0,0,0,0.15);
+  --table-header-background:       rgba(238,177,87,0.35);
+  --table-header-background-hover: rgba(238,177,87,0.6);
+  --table-header-border-color:     rgba(0,0,0,0.2);
+  --table-header-color:            var(--os-ink);
+  --table-row-background-hover:    rgba(0,0,0,0.05);
+  --table-row-alt-background:      rgba(255,255,255,0.3);
+
+  --checkbox-color:              var(--os-steel);
+  --checkbox-color-hover:        #155f80;
+  --checkbox-border-color:       rgba(0,0,0,0.3);
+  --checkbox-border-color-hover: var(--os-steel);
+
+  --toggle-color: var(--os-steel);
+
+  --modal-background:    var(--os-bg-linen);
+  --modal-border-color:  rgba(0,0,0,0.2);
+
+  --prompt-background:   var(--os-bg-linen);
+  --prompt-border-color: rgba(0,0,0,0.2);
+
+  --tooltip-background: var(--os-bg-gold);
+
+  --font-text:             var(--os-font-ui);
+  --font-monospace:        var(--os-font-mono);
+  --font-interface:        var(--os-font-ui);
+  --font-text-size:        13px;
+  --font-text-line-height: 1.65;
+  --font-monospace-size:   13px;
+  --font-smallest:         10px;
+  --font-smaller:          11px;
+  --font-small:            12px;
+  --font-ui-smaller:       11px;
+  --font-ui-small:         12px;
+  --font-ui-medium:        13px;
+  --font-ui-large:         15px;
+  --footnote-size:         0.85em;
+}
+
+
+/* ================================================================
+   § 1 — WORKSPACE LAYOUT
+   ================================================================ */
+
+.workspace {
+  background: var(--background-secondary-alt);
+}
+
+.workspace-split > .workspace-split-resize-handle {
+  width: 4px;
+  background: var(--divider-color);
+  transition: background var(--os-t-fast);
+}
+.workspace-split > .workspace-split-resize-handle:hover,
+.workspace-split > .workspace-split-resize-handle.is-active {
+  background: var(--divider-color-hover);
+}
+.workspace-split.mod-horizontal > .workspace-split-resize-handle {
+  height: 3px;
+  width: auto;
+}
+
+.workspace-leaf.mod-active .workspace-leaf-resize-handle {
+  background: var(--os-cyan, var(--interactive-accent));
+}
+
+/* ================================================================
+   § 2 — RIBBON
+   ================================================================ */
+
+.workspace-ribbon {
+  background: var(--ribbon-background);
+  border: none;
+}
+.workspace-ribbon.mod-left {
+  border-right: 1px solid var(--background-primary);
+}
+.workspace-ribbon.mod-right {
+  min-width: var(--ribbon-width);
+}
+.workspace-ribbon.is-collapsed {
+  background: var(--ribbon-background-collapsed);
+}
+
+.side-dock-ribbon-action,
+.workspace-ribbon-collapse-btn {
+  color: var(--text-faint);
+  transition: color var(--os-t-fast);
+}
+.side-dock-ribbon-action:hover,
+.workspace-ribbon-collapse-btn:hover {
+  color: var(--text-accent);
+  background: transparent;
+}
+.side-dock-ribbon-action svg,
+.workspace-ribbon-collapse-btn svg {
+  width:  12px;
+  height: 12px;
+}
+.side-dock-ribbon-tab.is-active {
+  color: var(--text-accent);
+}
+
+/* ================================================================
+   § 3 — TITLEBAR
+   ================================================================ */
+
+.titlebar {
+  background: var(--titlebar-background);
+  border-bottom: none;
+}
+.titlebar-text {
+  color: var(--titlebar-text-color);
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-small);
+}
+.is-focused .titlebar {
+  background: var(--titlebar-background-focused);
+}
+.is-focused .titlebar-text {
+  color: var(--titlebar-text-color-focused);
+}
+
+/* ================================================================
+   § 4 — TAB BAR & TABS
+   ================================================================ */
+
+.workspace-tab-header-container {
+  background: var(--tab-container-background);
+  border-bottom: 1px solid var(--tab-divider-color);
+}
+
+.workspace-tab-header {
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--tab-divider-color);
+  color: var(--tab-text-color);
+  font-size: var(--tab-font-size);
+  font-weight: var(--tab-font-weight);
+  transition: color var(--os-t-tab), background var(--os-t-tab);
+}
+.workspace-tab-header:hover {
+  color: var(--tab-text-color-focused);
+  background: rgba(255,255,255,0.04);
+}
+.workspace-tab-header.is-active {
+  background: var(--tab-background-active);
+  color: var(--tab-text-color-focused-active-current);
+  border-bottom: 2.5px solid var(--os-cyan, var(--interactive-accent));
+}
+.workspace-tab-header.mod-active.is-active {
+  color: var(--tab-text-color-focused-active-current);
+}
+
+.workspace-tab-header-inner-close-btn       { color: var(--text-faint); }
+.workspace-tab-header-inner-close-btn:hover { color: var(--os-hot-pink, var(--text-error)); }
+
+.workspace-split.mod-left-split .workspace-tab-header-container,
+.workspace-split.mod-right-split .workspace-tab-header-container {
+  background: transparent;
+  border-bottom: 1px solid rgba(40,176,255,0.08);
+}
+.workspace-split.mod-left-split .workspace-tab-header,
+.workspace-split.mod-right-split .workspace-tab-header {
+  color: rgba(255,255,255,0.3);
+  font-size: var(--font-ui-smaller);
+}
+.workspace-split.mod-left-split .workspace-tab-header.is-active,
+.workspace-split.mod-right-split .workspace-tab-header.is-active {
+  color: rgba(255,255,255,0.85);
+  background: rgba(40,176,255,0.05);
+  border-bottom-color: var(--os-cyan, var(--interactive-accent));
+}
+
+.workspace-tab-header-new-tab       { color: var(--text-faint); }
+.workspace-tab-header-new-tab:hover { color: var(--text-accent); }
+
+/* Light mode tab accent */
+.theme-light .workspace-tab-header.is-active,
+.theme-light .workspace-split.mod-left-split  .workspace-tab-header.is-active,
+.theme-light .workspace-split.mod-right-split .workspace-tab-header.is-active {
+  border-bottom-color: var(--os-rust, var(--text-accent));
+}
+
+/* ================================================================
+   § 5 — SIDEBAR PANELS
+   ================================================================ */
+
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background: var(--background-secondary-alt); /* pure black base layer */
+}
+.workspace-split.mod-left-split .workspace-leaf-content,
+.workspace-split.mod-right-split .workspace-leaf-content {
+  background: var(--background-secondary);     /* dark panel floats above base */
+  box-shadow: 0 0 0 1px rgba(40,176,255,0.04) inset; /* cyan micro-border for depth */
+}
+
+.workspace-leaf-content .view-header {
+  background: rgba(13,23,32,0.96);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.workspace-leaf-content .view-header-title {
+  color: var(--text-muted);
+  font-family: var(--font-interface);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ================================================================
+   § 6 — FILE EXPLORER
+   ================================================================ */
+
+.nav-files-container {
+  padding: 4px 0;
+  background: transparent; /* inherits dark panel from leaf-content */
+}
+
+.nav-folder-title {
+  color: var(--nav-folder-color);
+  font-size: var(--nav-item-size);
+  font-weight: var(--nav-folder-weight);
+  line-height: 14px;
+  padding: 2px 8px;
+  border-radius: 0;
+  transition: color var(--os-t-fast), background var(--os-t-fast);
+}
+.nav-folder-title:hover {
+  color: var(--nav-folder-color-hover);
+  background: var(--nav-item-background-hover);
+}
+.nav-folder.is-collapsed > .nav-folder-title {
+  color: var(--nav-folder-color);
+}
+
+.nav-folder-collapse-indicator {
+  color: var(--text-faint);
+  transition: transform var(--os-t-folder), color var(--os-t-fast);
+}
+.nav-folder-title:hover .nav-folder-collapse-indicator {
+  color: var(--text-muted);
+}
+
+.nav-folder-children { transition: none; }
+
+.nav-file-title {
+  color: var(--nav-item-color);
+  font-size: var(--nav-item-size);
+  font-weight: var(--nav-item-weight);
+  line-height: 14px;
+  padding: 2px 8px 2px 18px;
+  border-radius: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  transition: color var(--os-t-fast), background var(--os-t-fast);
+}
+.nav-file-title:hover {
+  color: var(--nav-item-color-hover);
+  background: var(--nav-item-background-hover);
+}
+.nav-file-title.is-active {
+  color: var(--nav-item-color-active);
+  font-weight: var(--nav-item-weight-active);
+  background: var(--nav-item-background-active);
+}
+
+.nav-file-title-content .search-result-file-title span {
+  color: var(--nav-item-color-highlighted);
+}
+
+.nav-folder .nav-folder .nav-file-title                { padding-left: 28px; }
+.nav-folder .nav-folder .nav-folder .nav-file-title    { padding-left: 38px; }
+
+.tag-pane-tag-text {
+  color: var(--os-tag-magenta, rgb(238,54,238));
+  font-size: var(--font-ui-smaller);
+}
+.theme-light .tag-pane-tag-text { color: var(--os-ink); }
+
+/* ================================================================
+   § 7 — MAIN EDITOR CONTAINER
+   ================================================================ */
+
+.workspace-leaf-content[data-type="markdown"] .view-content {
+  background: var(--background-primary);
+}
+
+/* ================================================================
+   § 8 — READING VIEW
+   ================================================================ */
+
+.markdown-reading-view {
+  background: var(--background-primary);
+}
+.markdown-preview-view {
+  padding: 0;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-family: var(--font-text);
+  font-size: var(--font-text-size);
+  line-height: var(--font-text-line-height);
+}
+.markdown-preview-section {
+  padding: 20px 30px 30px 45px;
+  max-width: var(--file-line-width);
+}
+
+/* ================================================================
+   § 9 — SOURCE / LIVE PREVIEW EDITOR
+   ================================================================ */
+
+.markdown-source-view.mod-cm6 .cm-editor {
+  background: var(--background-primary);
+}
+.markdown-source-view.mod-cm6 .cm-content {
+  padding: 20px 30px 30px 45px;
+  caret-color: var(--text-accent);
+}
+.markdown-source-view.mod-cm6 .cm-line {
+  color: var(--text-normal);
+  font-family: var(--font-text);
+  font-size: var(--font-text-size);
+  line-height: var(--font-text-line-height);
+}
+.markdown-source-view.mod-cm6 .cm-cursor {
+  border-left-color: var(--text-accent);
+  border-left-width: 2px;
+}
+.markdown-source-view.mod-cm6 .cm-selectionBackground,
+.markdown-source-view.mod-cm6.cm-focused .cm-selectionBackground {
+  background: var(--text-selection);
+}
+
+/* ================================================================
+   § 10 — HEADINGS — READING VIEW
+   ================================================================ */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  font-family: var(--font-text);
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+.markdown-preview-view h1 {
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--os-cyan, var(--text-accent));
+}
+.markdown-preview-view h2 {
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--os-border-dark, var(--divider-color));
+}
+
+.markdown-preview-view h3 { padding-left: 10px; }
+.markdown-preview-view h4 { padding-left: 30px; }
+.markdown-preview-view h5 { padding-left: 50px; }
+.markdown-preview-view h6 { padding-left: 70px; }
+
+.theme-light .markdown-preview-view h1 {
+  border-bottom-color: var(--os-rust, var(--text-accent));
+}
+.theme-light .markdown-preview-view h2 {
+  border-bottom-color: rgba(0,0,0,0.2);
+}
+
+/* ================================================================
+   § 11 — HEADINGS — SOURCE / LIVE PREVIEW
+   ================================================================ */
+
+.cm-header-1 { color: var(--h1-color) !important; }
+.cm-header-2 { color: var(--h2-color) !important; }
+.cm-header-3 { color: var(--h3-color) !important; }
+.cm-header-4 { color: var(--h4-color) !important; }
+.cm-header-5 { color: var(--h5-color) !important; }
+.cm-header-6 { color: var(--h6-color) !important; font-style: italic; }
+
+.HyperMD-header-1 { font-size: var(--h1-size); line-height: var(--h1-line-height); }
+.HyperMD-header-2 { font-size: var(--h2-size); line-height: var(--h2-line-height); }
+.HyperMD-header-3 { font-size: var(--h3-size); line-height: var(--h3-line-height); }
+.HyperMD-header-4 { font-size: var(--h4-size); line-height: var(--h4-line-height); }
+.HyperMD-header-5 { font-size: var(--h5-size); line-height: var(--h5-line-height); }
+.HyperMD-header-6 { font-size: var(--h6-size); line-height: var(--h6-line-height); }
+
+.HyperMD-header-1 {
+  border-bottom: 1px solid var(--os-cyan, var(--text-accent));
+  padding-bottom: 4px;
+}
+.HyperMD-header-2 {
+  border-bottom: 1px solid var(--os-border-dark, var(--divider-color));
+  padding-bottom: 3px;
+}
+
+.HyperMD-header-3 { padding-left: 10px; }
+.HyperMD-header-4 { padding-left: 30px; }
+.HyperMD-header-5 { padding-left: 50px; }
+.HyperMD-header-6 { padding-left: 70px; }
+
+.theme-light .HyperMD-header-1 { border-bottom-color: var(--os-rust, var(--text-accent)); }
+.theme-light .HyperMD-header-2 { border-bottom-color: rgba(0,0,0,0.2); }
+
+/* ================================================================
+   § 12 — BODY TYPOGRAPHY
+   ================================================================ */
+
+.markdown-preview-view p {
+  margin-top: 0;
+  margin-bottom: 0.7em;
+}
+
+strong, .cm-strong             { font-weight: 700; }
+em,     .cm-em                 { font-style: italic; }
+s, del, .cm-strikethrough      { color: var(--text-faint); }
+
+hr {
+  border: none;
+  border-top: var(--hr-thickness) solid var(--hr-color);
+  margin: 1.5em 0;
+}
+.markdown-source-view .HyperMD-hr {
+  border-top: var(--hr-thickness) solid var(--hr-color);
+}
+
+/* ================================================================
+   § 13 — LISTS
+   ================================================================ */
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+  padding-left: 1.5em;
+}
+.markdown-preview-view li {
+  margin-bottom: 0.2em;
+}
+
+.markdown-preview-view ul ul,
+.markdown-preview-view ol ol,
+.markdown-preview-view ul ol,
+.markdown-preview-view ol ul {
+  border-left: var(--indentation-guide-width) solid var(--indentation-guide-color);
+  margin-left: 0.1em;
+  padding-left: 1.2em;
+}
+.markdown-preview-view li:hover > ul,
+.markdown-preview-view li:hover > ol {
+  border-left-color: var(--indentation-guide-color-active);
+}
+
+/* ================================================================
+   § 14 — INLINE CODE
+   ================================================================ */
+
+code,
+.cm-inline-code {
+  font-family: var(--font-monospace);
+  font-size: var(--code-size);
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: var(--code-background);
+  color: var(--os-hot-pink, var(--text-error));
+}
+.theme-light code,
+.theme-light .cm-inline-code {
+  color: var(--os-steel, var(--text-accent));
+}
+
+h1 code, h2 code, h3 code,
+h4 code, h5 code, h6 code { font-size: 0.85em; }
+
+/* ================================================================
+   § 15 — CODE BLOCKS
+   ================================================================ */
+
+pre,
+.markdown-preview-view pre {
+  background: var(--code-background);
+  border-radius: 4px;
+  padding: 6px 10px;
+  overflow-x: auto;
+  margin: 0.8em 0;
+}
+pre code,
+.markdown-preview-view pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 13px;
+  font-family: var(--font-monospace);
+  white-space: pre-wrap;
+  color: var(--code-normal);
+}
+
+.HyperMD-codeblock {
+  font-family: var(--font-monospace) !important;
+  font-size: var(--font-monospace-size);
+  background: var(--code-background);
+  color: var(--code-normal);
+}
+.HyperMD-codeblock-begin { border-radius: 4px 4px 0 0; padding-top: 5px; }
+.HyperMD-codeblock-end   { border-radius: 0 0 4px 4px; padding-bottom: 5px; }
+
+.code-block-flair {
+  color: var(--text-faint);
+  font-size: var(--font-smaller);
+  font-family: var(--font-monospace);
+}
+
+.cm-keyword,     .token.keyword     { color: var(--code-keyword); }
+.cm-def,         .token.function    { color: var(--code-function); }
+.cm-property,    .token.property    { color: var(--code-property); }
+.cm-string,      .token.string      { color: var(--code-string); }
+.cm-comment,     .token.comment     { color: var(--code-comment); font-style: italic; }
+.cm-number,      .token.number      { color: var(--code-value); }
+.cm-operator,    .token.operator    { color: var(--code-operator); }
+.cm-punctuation, .token.punctuation { color: var(--code-punctuation); }
+.cm-tag,         .token.tag         { color: var(--code-tag); }
+.cm-variable,    .token.variable    { color: var(--code-normal); }
+.cm-builtin                         { color: var(--code-important); }
+.cm-attribute                       { color: var(--code-operator); }
+
+/* ================================================================
+   § 16 — LINKS
+   ================================================================ */
+
+a,
+.external-link,
+.markdown-preview-view a.external-link {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: color var(--os-t-fast);
+}
+a:hover,
+.external-link:hover,
+.markdown-preview-view a.external-link:hover {
+  color: var(--text-accent-hover);
+  text-decoration: underline;
+}
+
+.internal-link,
+.markdown-preview-view a.internal-link {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+.internal-link:hover,
+.markdown-preview-view a.internal-link:hover {
+  color: var(--text-accent-hover);
+  text-decoration: underline;
+}
+
+.is-unresolved {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.cm-link,
+.cm-url,
+.cm-hmd-internal-link {
+  color: var(--text-accent);
+}
+
+/* ================================================================
+   § 17 — TAGS
+   ================================================================ */
+
+.tag,
+a.tag {
+  display: inline-block;
+  font-family: var(--font-interface);
+  font-size: var(--tag-font-size);
+  font-weight: var(--tag-weight);
+  color: var(--tag-color);
+  background: var(--tag-background);
+  padding: var(--tag-padding-y) var(--tag-padding-x);
+  border-radius: var(--tag-radius);
+  text-decoration: none;
+  text-shadow: none;
+  border: none;
+  transition: background var(--os-t-fast);
+}
+.tag:hover,
+a.tag:hover {
+  background: var(--tag-background-hover);
+  color: var(--tag-color);
+}
+
+a.tag[href="#important"]  { background: #8b0000; }
+a.tag[href="#complete"]   { background: #1a5c2a; }
+a.tag[href="#inprogress"] { background: #7a4500; }
+a.tag[href="#obsidian"]   { background: #4d3ca6; }
+
+.cm-hashtag       { color: var(--text-muted); }
+.cm-hashtag-begin { color: var(--text-faint); }
+.cm-hashtag-end   { color: var(--text-muted); }
+
+/* ================================================================
+   § 18 — BLOCKQUOTES
+   ================================================================ */
+
+blockquote,
+.markdown-preview-view blockquote {
+  margin: 0.8em 0;
+  padding: 4px 0 4px 14px;
+  border-left: 3px solid var(--os-border-teal, var(--border-color));
+  color: var(--text-muted);
+  background: transparent;
+  font-style: normal;
+}
+.theme-light blockquote,
+.theme-light .markdown-preview-view blockquote {
+  border-left-color: var(--os-rust, var(--text-accent));
+}
+
+.HyperMD-quote {
+  border-left: 3px solid var(--os-border-teal, var(--border-color));
+  padding-left: 14px;
+  color: var(--text-muted);
+}
+.theme-light .HyperMD-quote {
+  border-left-color: var(--os-rust, var(--text-accent));
+}
+
+/* ================================================================
+   § 19 — TABLES
+   ================================================================ */
+
+.markdown-preview-view table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+  font-size: var(--font-text-size);
+}
+.markdown-preview-view th {
+  background: var(--table-header-background);
+  color: var(--table-header-color);
+  font-weight: var(--table-header-weight);
+  border: var(--table-header-border-width) solid var(--table-header-border-color);
+  padding: 6px 10px;
+  text-align: left;
+}
+.markdown-preview-view th:hover {
+  background: var(--table-header-background-hover);
+}
+.markdown-preview-view td {
+  border: var(--table-border-width) solid var(--table-border-color);
+  padding: 5px 10px;
+  color: var(--text-normal);
+}
+.markdown-preview-view tr:nth-child(even) td {
+  background: var(--table-row-alt-background);
+}
+.markdown-preview-view tr:hover td {
+  background: var(--table-row-background-hover);
+}
+
+/* ================================================================
+   § 20 — CALLOUTS
+   ================================================================ */
+
+.callout {
+  background: transparent;
+  border: var(--callout-border-width) solid currentColor;
+  border-radius: var(--callout-radius);
+  padding: var(--callout-padding);
+  margin: 1em 0;
+}
+.callout-title {
+  font-family: var(--font-interface);
+  font-size: var(--callout-title-size);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.callout-content {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: var(--font-text-size);
+}
+
+/* ================================================================
+   § 21 — EMBEDS / TRANSCLUSIONS
+   ================================================================ */
+
+.markdown-embed,
+.internal-embed {
+  border-left: var(--embed-border-left);
+  border-right: var(--embed-border-right);
+  border-top: var(--embed-border-top);
+  border-bottom: var(--embed-border-bottom);
+  background: var(--embed-background);
+  padding: var(--embed-padding);
+  margin: 0.6em 0;
+}
+
+.markdown-embed-title,
+.embed-title {
+  font-size: 10px;
+  font-weight: 100;
+  color: var(--text-faint);
+  margin-bottom: 2px;
+  letter-spacing: 0.04em;
+}
+.markdown-embed-title::before {
+  content: ">> ";
+  color: var(--text-accent);
+  font-weight: 400;
+}
+
+.markdown-embed .markdown-preview-view   { padding: 0; background: transparent; }
+.markdown-embed .markdown-preview-section { padding: 0; }
+
+/* ================================================================
+   § 22 — CHECKBOXES & TASK LISTS
+   ================================================================ */
+
+.task-list-item {
+  list-style: none;
+  padding-left: 0;
+}
+.task-list-item-checkbox {
+  width:  var(--checkbox-size);
+  height: var(--checkbox-size);
+  border-radius: var(--checkbox-radius);
+  border: 1px solid var(--checkbox-border-color);
+  cursor: pointer;
+  margin-right: 6px;
+  vertical-align: middle;
+  transition: border-color var(--os-t-fast), background var(--os-t-fast);
+  filter: hue-rotate(-23deg);
+}
+.theme-light .task-list-item-checkbox { filter: hue-rotate(183deg); }
+
+.task-list-item-checkbox:hover   { border-color: var(--checkbox-border-color-hover); }
+.task-list-item-checkbox:checked { background: var(--checkbox-color); border-color: var(--checkbox-color); }
+
+.task-list-item.is-checked .task-list-item-label {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+
+/* ================================================================
+   § 23 — FOOTNOTES
+   ================================================================ */
+
+.markdown-preview-view .footnotes {
+  font-size: var(--footnote-size);
+  color: var(--text-muted);
+  border-top: var(--hr-thickness) solid var(--hr-color);
+  padding-top: 0.5em;
+  margin-top: 2em;
+}
+.footnote-ref {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+.footnote-backref { color: var(--text-accent); }
+
+/* ================================================================
+   § 24 — IMAGES
+   ================================================================ */
+
+.markdown-preview-view img {
+  max-width: 100%;
+  transform: scale(0.97);
+  transform-origin: top left;
+  transition: transform 200ms ease-out;
+  border-radius: 2px;
+}
+.markdown-preview-view img:hover {
+  transform: scale(1);
+}
+
+/* ================================================================
+   § 25 — SEARCH
+   ================================================================ */
+
+.search-result-file-title {
+  color: var(--text-normal);
+  font-weight: 600;
+  font-size: var(--font-ui-small);
+}
+.search-result-file-match {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+.search-result-file-match-highlight {
+  color: var(--nav-item-color-highlighted);
+  background: transparent;
+  font-weight: 600;
+}
+
+.search-input-container input {
+  font-family: var(--os-font-input, var(--font-interface));
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+  background: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--input-radius);
+  height: var(--input-height);
+  transition: border-color var(--os-t-fast);
+}
+.search-input-container input:focus {
+  border-color: var(--background-modifier-border-focus);
+  outline: none;
+}
+.search-input-clear-button       { color: var(--text-faint); }
+.search-input-clear-button:hover { color: var(--text-muted); }
+
+.markdown-preview-view mark,
+.markdown-source-view mark {
+  background: var(--text-highlight-bg);
+  color: inherit;
+  border-radius: 2px;
+}
+
+/* ================================================================
+   § 26 — METADATA / FRONTMATTER
+   ================================================================ */
+
+.metadata-container {
+  background: var(--metadata-background);
+  border-bottom: 1px solid var(--metadata-divider-color);
+  margin-bottom: 0.5em;
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-small);
+}
+.metadata-property-key   { color: var(--metadata-label-text-color); }
+.metadata-property-value { color: var(--metadata-input-text-color); }
+
+/* ================================================================
+   § 27 — GRAPH VIEW
+   ================================================================ */
+
+.graph-view.color-fill            { color: var(--graph-node); }
+.graph-view.color-fill-tag        { color: var(--graph-node-tag); }
+.graph-view.color-fill-attachment { color: var(--graph-node-attachment); }
+.graph-view.color-fill-unresolved { color: var(--graph-node-unresolved); }
+.graph-view.color-fill-focused    { color: var(--graph-node-focused); }
+.graph-view.color-arrow           { color: var(--graph-line); }
+.graph-view.color-circle          { color: var(--graph-line); }
+.graph-view.color-text            { color: var(--graph-text); }
+.graph-view.color-line            { color: var(--graph-line); }
+
+.graph-view-outer { background: var(--graph-bg); }
+.graph-controls {
+  background: var(--background-primary-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-m);
+}
+
+/* ================================================================
+   § 28 — STATUS BAR
+   ================================================================ */
+
+.status-bar {
+  background: var(--status-bar-background);
+  color: var(--status-bar-text-color);
+  border-top: none;
+  font-family: var(--font-interface);
+  font-size: var(--status-bar-font-size);
+}
+.status-bar-item       { color: var(--status-bar-text-color); padding: 0 6px; }
+.status-bar-item:hover { color: var(--text-muted); }
+
+/* ================================================================
+   § 29 — MODALS & COMMAND PALETTE
+   ================================================================ */
+
+.modal-container { background: rgba(0,0,0,0.6); }
+.modal {
+  background: var(--modal-background);
+  border: var(--modal-border-width) solid var(--modal-border-color);
+  border-radius: var(--modal-radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+.modal-title {
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-large);
+  font-weight: 600;
+  color: var(--text-normal);
+}
+.modal-close-button       { color: var(--text-faint); }
+.modal-close-button:hover { color: var(--os-hot-pink, var(--text-error)); }
+
+.prompt {
+  background: var(--prompt-background);
+  border: var(--prompt-border-width) solid var(--prompt-border-color);
+  border-radius: 4px;
+  max-width: var(--prompt-max-width);
+  max-height: var(--prompt-max-height);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+}
+.prompt-input-container {
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 12px;
+}
+.prompt-input {
+  font-family: var(--os-font-input, var(--font-interface));
+  font-size: var(--font-ui-medium);
+  color: var(--text-normal);
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  caret-color: var(--text-accent);
+}
+
+.suggestion-item {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  padding: 5px 12px;
+  border-radius: 0;
+  transition: background var(--os-t-fast);
+}
+.suggestion-item.is-selected,
+.suggestion-item:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+.suggestion-item.is-selected { color: var(--text-accent); }
+.suggestion-highlight        { color: var(--nav-item-color-highlighted); font-weight: 600; }
+.suggestion-aux              { color: var(--text-faint); font-size: var(--font-ui-smaller); }
+
+/* ================================================================
+   § 30 — TOOLTIPS
+   ================================================================ */
+
+.tooltip {
+  background: var(--tooltip-background);
+  color: var(--text-normal);
+  font-family: var(--font-interface);
+  font-size: var(--tooltip-font-size);
+  border-radius: 3px;
+  padding: 4px 8px;
+  max-width: var(--tooltip-max-width);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  border: 1px solid var(--border-color);
+}
+
+/* ================================================================
+   § 31 — SCROLLBARS
+   ================================================================ */
+
+::-webkit-scrollbar {
+  width:  10px;
+  height: 10px;
+  background: var(--scrollbar-bg);
+}
+::-webkit-scrollbar-track  { background: var(--scrollbar-bg); border-radius: 0; }
+::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb-bg); border-radius: 0; border: none; }
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active { background: var(--scrollbar-active-thumb-bg); }
+::-webkit-scrollbar-corner { background: var(--scrollbar-bg); }
+
+.cm-scroller::-webkit-scrollbar { width: 10px; height: 10px; }
+
+/* ================================================================
+   § 32 — SETTINGS PANEL
+   ================================================================ */
+
+.vertical-tab-header {
+  background: var(--background-secondary-alt);
+  border-right: 1px solid var(--border-color);
+}
+.vertical-tab-header-group-title {
+  color: var(--text-faint);
+  font-size: var(--font-ui-smaller);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 12px 4px;
+}
+.vertical-tab-nav-item {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  border-radius: 0;
+  transition: color var(--os-t-fast), background var(--os-t-fast);
+}
+.vertical-tab-nav-item:hover {
+  color: var(--text-normal);
+  background: var(--background-modifier-hover);
+}
+.vertical-tab-nav-item.is-active {
+  color: var(--text-accent);
+  background: var(--nav-item-background-active);
+  border-left: 2px solid var(--text-accent);
+}
+
+.setting-item {
+  border-top: 1px solid var(--background-modifier-border);
+  padding: 10px 0;
+}
+.setting-item-name        { color: var(--text-normal); font-weight: 500; }
+.setting-item-description { color: var(--text-muted); font-size: var(--font-ui-small); }
+
+.setting-item-control input[type="text"],
+.setting-item-control input[type="number"],
+.setting-item-control textarea {
+  background: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--input-radius);
+  color: var(--text-normal);
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-small);
+}
+.setting-item-control input:focus,
+.setting-item-control textarea:focus {
+  border-color: var(--background-modifier-border-focus);
+  outline: none;
+}
+
+button.mod-cta {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-radius: 3px;
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-small);
+  padding: 4px 12px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--os-t-fast);
+}
+button.mod-cta:hover { background: var(--interactive-accent-hover); }
+
+button,
+.clickable-icon { border-radius: 0; transition: color var(--os-t-fast), background var(--os-t-fast); }
+.clickable-icon        { color: var(--text-faint); }
+.clickable-icon:hover  { color: var(--text-normal); background: var(--background-modifier-hover); }
+
+/* ================================================================
+   § 33 — POPOVER (hover preview)
+   ================================================================ */
+
+.popover.hover-popover {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  min-width: 340px;
+  max-width: 500px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.popover.hover-popover .markdown-preview-view   { padding: 12px 16px; }
+.popover.hover-popover .markdown-preview-section { padding: 0; }
+
+/* ================================================================
+   § 34 — MISC / POLISH
+   ================================================================ */
+
+.workspace-split.mod-left-split .view-header-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-folder.is-collapsed > .nav-folder-title > .nav-folder-collapse-indicator {
+  transform: rotate(-90deg);
+}
+.nav-folder-collapse-indicator { transition: transform var(--os-t-folder); }
+
+.workspace-tab-header-container,
+.workspace-ribbon,
+.status-bar,
+.titlebar,
+.nav-header { border-radius: 0; }
+
+.nav-file-title-content {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: break-word;
+}
+
+.mermaid {
+  background: var(--background-primary-alt);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+@media print {
+  .workspace-ribbon,
+  .workspace-split.mod-left-split,
+  .workspace-split.mod-right-split,
+  .status-bar { display: none; }
+  .markdown-preview-view { color: #000; background: #fff; }
+}
