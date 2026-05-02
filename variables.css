@@ -157,6 +157,7 @@
   --nav-folder-weight:          600;
   --nav-folder-weight-hover:    600;
   --nav-folder-weight-active:   600;
+  --nav-indent:                 8px;
 
   /* Tabs */
   --tab-text-color:                        var(--os-ink-ghost);
@@ -461,6 +462,7 @@
   --nav-folder-color-hover:     var(--os-rust);
   --nav-folder-color-active:    var(--os-rust);
   --nav-folder-weight:          600;
+  --nav-indent:                 8px;
 
   --tab-text-color:                        var(--os-ink-dim);
   --tab-text-color-focused:                var(--os-ink);

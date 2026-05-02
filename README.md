@@ -1,94 +1,40 @@
-# Ono-Sendai
+# Ono-Sendai Cyberspace 7
 
-A terminal retro-look theme for [Obsidian](https://obsidian.md).
+Because nothing else felt right at 2am with bad eyes and good music. 
 
-Dark-mode by default, with a secondary light mode. Designed for immersive, distraction-free note-taking with a phosphor-CRT aesthetic: deep blacks, vivid punctuation accents (electric cyan, terminal green, hot pink), and a dense information layout that keeps structure visible rather than hidden.
+Dark mode, deep blacks, cyan on the links, matrix green for code snippets, hot pink for a kick. 
 
----
-
-## Features
-
-- Anti-distraction focus — visible structure instead of hidden chrome
-- Tab icons replaced by text
-- High-density layout with more content displayed at a glance
-- Images scaled down with hover zoom
-- File explorer: compact 12 px font, full filenames wrap (no truncation)
-- Cascading heading indent (H3–H6 step 10 px per level)
-- Aligned footnotes offset for consistent leading
-- WCAG AA contrast compliant for all body text
-- Supports both **dark mode** and **light mode**
+There's a light mode too: warmer, linen and amber, different mood entirely.
 
 ---
 
-## Installation
+## Install
 
-### Manual (recommended for personal use)
+1. Clone or download
+2. Put `theme.css` and `variables.css` into `.obsidian/themes/Ono-Sendai/` in your vault
+3. Obsidian → **Settings → Appearance → Themes** → select **Ono-Sendai**
 
-1. Download or clone this repository.
-2. Open your vault's folder and navigate to `.obsidian/themes/`.
-3. Create a subfolder named `Ono-Sendai` and copy these files into it:
-   - `theme.css`
-   - `variables.css`
-4. In Obsidian, open **Settings → Appearance → Themes** and select **Ono-Sendai**.
+Both files need to sit together — `theme.css` imports `variables.css` directly.
 
-> **Note:** `theme.css` uses `@import "variables.css"` — both files must live in the same folder.
-
-### Optional: manifest.json
-
-For the theme to appear in the community theme browser it needs a `manifest.json`. For local use no manifest is required. If you want to create one, place this in the theme folder:
-
-```json
-{
-  "name": "Ono-Sendai",
-  "version": "1.0.0",
-  "minAppVersion": "1.6.0",
-  "author": "your-name",
-  "authorUrl": "",
-  "isDesktopOnly": false
-}
-```
+Needs Obsidian **v1.6+**.
 
 ---
 
 ## Fonts
 
-The theme is designed with **Cairo** as the primary UI font (geometric sans-serif, available on [Google Fonts](https://fonts.google.com/specimen/Cairo)). It falls back gracefully to Roboto → Inter → Segoe UI.
+UI is **Cairo**. Mono is **Fira Code**. Falls back gracefully if you don't have them, but they're worth installing.
 
-For monospace, **Fira Code** is recommended (fallback: Source Code Pro → system monospace).
-
-To install Cairo on Linux:
 ```bash
-# Download from Google Fonts or via your package manager
-# e.g. on Arch: yay -S ttf-cairo
+# Arch
+yay -S ttf-cairo
 ```
 
 ---
 
-## Customisation
+## Customising
 
-All design tokens live in `variables.css`. Edit the `.theme-dark` or `.theme-light` block to change colours, type sizes, or spacing without touching component code.
-
-Key tokens:
-
-| Token | Purpose |
-|---|---|
-| `--os-bg-10` | Primary content background |
-| `--os-bg-panel` | Sidebar teal background |
-| `--os-cyan` | Accent / link colour |
-| `--os-green` | H2 heading colour |
-| `--os-hot-pink` | Error / inline code accent |
-| `--os-amber` | Mild accent / indicators |
+All the tokens are in `variables.css`, split into `.theme-dark` and `.theme-light` blocks. Colours, sizes, spacing — it's all there, named clearly. Should be easy to get into.
 
 ---
 
-## Compatibility
-
-- Obsidian **v1.6+** (CM6 editor, CSS variable API)
-- Desktop and mobile (no desktop-only features)
-- Tested with core plugins: File Explorer, Graph View, Search, Outline, Tags
-
----
-
-## Attribution
-
-Design system derived from visual reference screenshots and style notes in `style-specs/`. Clean-room CSS implementation.
+*by [cyberbadger](https://github.com/cyberbadger)*

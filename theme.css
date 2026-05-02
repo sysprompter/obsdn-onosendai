@@ -157,6 +157,7 @@
   --nav-folder-weight:          600;
   --nav-folder-weight-hover:    600;
   --nav-folder-weight-active:   600;
+  --nav-indent:                 8px;
 
   /* Tabs */
   --tab-text-color:                        var(--os-ink-ghost);
@@ -725,6 +726,7 @@
   --nav-folder-weight:          600;
   --nav-folder-weight-hover:    600;
   --nav-folder-weight-active:   600;
+  --nav-indent:                 8px;
 
   --tab-text-color:                        var(--os-ink-ghost);
   --tab-text-color-focused:                var(--os-ink-dim);
@@ -1359,8 +1361,8 @@
   color: var(--nav-item-color-highlighted);
 }
 
-.nav-folder .nav-folder .nav-file-title                { padding-left: 28px; }
-.nav-folder .nav-folder .nav-folder .nav-file-title    { padding-left: 38px; }
+.nav-folder .nav-folder .nav-file-title                { padding-left: 20px; }
+.nav-folder .nav-folder .nav-folder .nav-file-title    { padding-left: 28px; }
 
 .tag-pane-tag-text {
   color: var(--os-tag-magenta, rgb(238,54,238));
@@ -1392,8 +1394,10 @@
   line-height: var(--font-text-line-height);
 }
 .markdown-preview-section {
-  padding: 20px clamp(14px, 3%, 30px) 30px clamp(18px, 4%, 45px);
+  padding: 16px clamp(20px, 5%, 80px) 24px 16px;
   max-width: var(--file-line-width);
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* ================================================================
@@ -1404,7 +1408,7 @@
   background: var(--background-primary);
 }
 .markdown-source-view.mod-cm6 .cm-content {
-  padding: 20px clamp(14px, 3%, 30px) 30px clamp(18px, 4%, 45px);
+  padding: 16px clamp(20px, 5%, 80px) 24px 16px;
   caret-color: var(--text-accent);
 }
 .markdown-source-view.mod-cm6 .cm-line {
