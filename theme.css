@@ -142,7 +142,7 @@
 
   /* Navigation (file explorer) */
   --nav-item-size:              12px;
-  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color:             var(--os-ink);
   --nav-item-color-hover:       var(--os-ink);
   --nav-item-color-active:      var(--os-cyan);
   --nav-item-color-highlighted: var(--os-yellow);
@@ -451,7 +451,7 @@
   --tag-weight:           500;
 
   --nav-item-size:              12px;
-  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color:             var(--os-ink);
   --nav-item-color-hover:       var(--os-ink);
   --nav-item-color-active:      var(--os-rust);
   --nav-item-color-highlighted: var(--os-red);
@@ -711,7 +711,7 @@
   --tag-weight:           500;
 
   --nav-item-size:              12px;
-  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color:             var(--os-ink);
   --nav-item-color-hover:       var(--os-ink);
   --nav-item-color-active:      var(--os-cyan);
   --nav-item-color-highlighted: var(--os-yellow);
@@ -994,7 +994,7 @@
   --tag-weight:           500;
 
   --nav-item-size:              12px;
-  --nav-item-color:             var(--os-ink-dim);
+  --nav-item-color:             var(--os-ink);
   --nav-item-color-hover:       var(--os-ink);
   --nav-item-color-active:      var(--os-rust);
   --nav-item-color-highlighted: var(--os-red);
