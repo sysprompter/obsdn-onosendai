@@ -4,7 +4,7 @@ All notable changes to the Ono-Sendai theme are documented here.
 
 ---
 
-## [1.0.0] — 2026-04-30
+## [1.0.0] — 2026-05-17
 
 ### Initial release
 
@@ -39,6 +39,7 @@ All notable changes to the Ono-Sendai theme are documented here.
 - Active tab indicated by 2.5 px bottom accent stripe
 - Resize handle: 4 px wide (vertical), 3 px tall (horizontal)
 - File explorer: compact 12 px / 14 px, full filename wrap
+- File explorer emoji icons — folder (📂/📁 collapsed), image (🖼️), canvas (📊), PDF (📄), vault root (💻)
 
 **Components styled**
 - Workspace layout, ribbon, titlebar

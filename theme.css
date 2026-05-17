@@ -1364,6 +1364,33 @@
 .nav-folder .nav-folder .nav-file-title                { padding-left: 20px; }
 .nav-folder .nav-folder .nav-folder .nav-file-title    { padding-left: 28px; }
 
+/* — File & folder icons — */
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content::before {
+  content: '💻 ';
+}
+.nav-folder .nav-folder-title-content::before {
+  content: '📂 ';
+}
+.nav-folder.is-collapsed .nav-folder-title-content::before {
+  content: '📁 ';
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".png"] .nav-file-title-content::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".jpg"] .nav-file-title-content::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".jpeg"] .nav-file-title-content::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".gif"] .nav-file-title-content::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".svg"] .nav-file-title-content::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".webp"] .nav-file-title-content::before {
+  content: '🖼️ ';
+}
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".canvas"] .nav-file-title-content::before {
+  content: '📊 ';
+}
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".pdf"] .nav-file-title-content::before {
+  content: '📄 ';
+}
+
 .tag-pane-tag-text {
   color: var(--os-tag-magenta, rgb(238,54,238));
   font-size: var(--font-ui-smaller);

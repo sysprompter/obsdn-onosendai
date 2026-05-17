@@ -1,7 +1,8 @@
 {
-  "name": "Ono-Sendai Cyberspace 7",
+  "name": "Ono-Sendai: Ronin",
   "version": "1.0.0",
   "minAppVersion": "1.6.0",
-  "author": "cyberbadger",
-  "authorUrl": "https://github.com/cyberbadger"
+  "description": "Dark cyberpunk theme. Deep blacks, cyan links, matrix green code, hot pink accents. Light mode included.",
+  "author": "sysprompter",
+  "authorUrl": "https://github.com/sysprompter"
 }

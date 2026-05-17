@@ -1,6 +1,6 @@
-# Ono-Sendai Cyberspace 7
+# Ono-Sendai: Ronin
 
-Because nothing else felt right at 2am with bad eyes and good music. 
+Because nothing else felt right at 2am with bad eyes and good beats. 
 
 Dark mode, deep blacks, cyan on the links, matrix green for code snippets, hot pink for a kick. 
 
@@ -10,11 +10,15 @@ There's a light mode too: warmer, linen and amber, different mood entirely.
 
 ## Install
 
-1. Clone or download
-2. Put `theme.css` and `variables.css` into `.obsidian/themes/Ono-Sendai/` in your vault
-3. Obsidian → **Settings → Appearance → Themes** → select **Ono-Sendai**
+**Community store (recommended)**
 
-Both files need to sit together — `theme.css` imports `variables.css` directly.
+Obsidian → **Settings → Appearance → Themes → Browse** → search **Ono-Sendai: Ronin** → Install.
+
+**Manual**
+
+1. Clone or download
+2. Put `theme.css` and `variables.css` into `.obsidian/themes/Ono-Sendai Ronin/` in your vault
+3. Obsidian → **Settings → Appearance → Themes** → select **Ono-Sendai: Ronin**
 
 Needs Obsidian **v1.6+**.
 
@@ -33,8 +37,10 @@ yay -S ttf-cairo
 
 ## Customising
 
-All the tokens are in `variables.css`, split into `.theme-dark` and `.theme-light` blocks. Colours, sizes, spacing — it's all there, named clearly. Should be easy to get into.
+All the tokens are in `variables.css`, split into `.theme-dark` and `.theme-light` blocks. Colours, sizes, spacing — it's all there, named clearly I think. 
+
+Should be easy to get into and add your flavor.
 
 ---
 
-*by [cyberbadger](https://github.com/cyberbadger)*
+*by [sysprompter](https://github.com/sysprompter)*
