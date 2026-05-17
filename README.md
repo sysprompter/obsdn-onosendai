@@ -10,14 +10,8 @@ There's a light mode too: warmer, linen and amber, different mood entirely.
 
 ## Install
 
-**Community store (recommended)**
-
-Obsidian → **Settings → Appearance → Themes → Browse** → search **Ono-Sendai: Ronin** → Install.
-
-**Manual**
-
-1. Clone or download
-2. Put `theme.css` and `variables.css` into `.obsidian/themes/Ono-Sendai Ronin/` in your vault
+1. Download `theme.css` and `variables.css` from the [latest release](https://github.com/sysprompter/obsdn-onosendai/releases/latest)
+2. Put both files into `.obsidian/themes/Ono-Sendai Ronin/` in your vault
 3. Obsidian → **Settings → Appearance → Themes** → select **Ono-Sendai: Ronin**
 
 Needs Obsidian **v1.6+**.
